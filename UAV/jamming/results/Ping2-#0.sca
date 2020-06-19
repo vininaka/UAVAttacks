@@ -1,0 +1,87 @@
+version 2
+run Ping2-0-20191218-17:59:38-11310
+attr configname Ping2
+attr datetime 20191218-17:59:38
+attr experiment Ping2
+attr inifile jamming.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network uavsim.UAVNetwork
+attr processid 11310
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.constraintAreaMinX 0m
+param **.constraintAreaMinY 0m
+param **.constraintAreaMinZ 0m
+param **.constraintAreaMaxX 600m
+param **.constraintAreaMaxY 400m
+param **.constraintAreaMaxZ 0m
+param **.host*.**.channelNumber 0
+param **.attackHost*.**.channelNumber 0
+param **.wlan[0].radio.displayCommunicationRange true
+param *.host[0].wlan[*].radio.carrierFrequency 5GHz
+param *.host[1].wlan[*].radio.carrierFrequency 5GHz
+param *.host[2].wlan[*].radio.carrierFrequency 5GHz
+param *.host[3].wlan[*].radio.carrierFrequency 10GHz
+param *.host[4].wlan[*].radio.carrierFrequency 10GHz
+param *.host[5].wlan[*].radio.carrierFrequency 10GHz
+param *.channelControl.pMax 100mW
+param *.channelControl.sat -110dBm
+param *.channelControl.alpha 2
+param *.channelControl.numChannels 1
+param *.attackHost[0].wlan[*].radio.carrierFrequency 5GHz
+param *.attackHost[1].wlan[*].radio.carrierFrequency 6GHz
+param *.attackHost[2].wlan[*].radio.carrierFrequency 7GHz
+param *.attackHost[3].wlan[*].radio.carrierFrequency 8GHz
+param *.attackHost[4].wlan[*].radio.carrierFrequency 9GHz
+param *.attackHost[5].wlan[*].radio.carrierFrequency 10GHz
+param *.attackHost[6].wlan[*].radio.carrierFrequency 11GHz
+param *.attackHost[7].wlan[*].radio.carrierFrequency 12GHz
+param *.attackHost[8].wlan[*].radio.carrierFrequency 13GHz
+param *.attackHost[9].wlan[*].radio.carrierFrequency 14GHz
+param *.attackHost[10].wlan[*].radio.carrierFrequency 15GHz
+param *.attackHost[11].wlan[*].radio.carrierFrequency 5.5GHz
+param *.attackHost[12].wlan[*].radio.carrierFrequency 6.5GHz
+param *.attackHost[13].wlan[*].radio.carrierFrequency 7.5GHz
+param *.attackHost[14].wlan[*].radio.carrierFrequency 8.5GHz
+param *.attackHost[15].wlan[*].radio.carrierFrequency 9.5GHz
+param *.attackHost[16].wlan[*].radio.carrierFrequency 10.5GHz
+param *.attackHost[17].wlan[*].radio.carrierFrequency 11.5GHz
+param *.attackHost[18].wlan[*].radio.carrierFrequency 12.5GHz
+param *.attackHost[19].wlan[*].radio.carrierFrequency 13.5GHz
+param *.attackHost[20].wlan[*].radio.carrierFrequency 14.5GHz
+param **.attackHost[*].mobilityType "\"StationaryMobility\""
+param **.attackHost[*].mobility.initFromDisplayString false
+param **.host[*].mobilityType "\"MassMobility\""
+param **.host[*].mobility.initFromDisplayString false
+param **.host[*].mobility.changeInterval "truncnormal(2s, 0.5s)"
+param **.host[*].mobility.changeAngleBy "normal(0deg, 30deg)"
+param **.host[*].mobility.speed "truncnormal(20mps, 8mps)"
+param **.host[*].mobility.updateInterval 100ms
+param **.pingTestApp[*].continuous true
+param *.host[*].pingTestApp[*].destAddr "\"*\""
+param *.host[*].pingTestApp[*].startTime uniform(0.001s,3s)
+param *.host[*].pingTestApp[*].sendInterval 1s
+param *.host[*].pingTestApp[*].printPing true
+param *.host[*].numPingTestApps 1
+param *.attackHost[*].numPingTestApps 1
+param *.attackHost[*].pingTestApp[*].destAddr "\"*\""
+param *.attackHost[*].pingTestApp[*].startTime uniform(0.001s,3s)
+param *.attackHost[*].pingTestApp[*].sendInterval 0.0001s
+param **.wlan[*].bitrate 2Mbps
+param **.wlan[*].mgmt.frameCapacity 10
+param **.wlan[*].mac.address "\"auto\""
+param **.wlan[*].mac.maxQueueSize 14
+param **.wlan[*].mac.rtsThresholdBytes 3000B
+param **.wlan[*].mac.retryLimit 7
+param **.wlan[*].mac.cwMinData 7
+param **.wlan[*].mac.cwMinBroadcast 31
+param *.host[*].wlan[*].radio.transmitter.power 10mW
+param *.attackHost[*].wlan[*].radio.transmitter.power 5mW
+
+scalar UAVNetwork hackForCreateResultsFolder 0
+

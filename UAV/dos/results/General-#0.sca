@@ -1,0 +1,4587 @@
+version 2
+run General-0-20191202-09:23:36-16179
+attr configname General
+attr datetime 20191202-09:23:36
+attr experiment General
+attr inifile dos.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network uavsim.UAVNetwork
+attr processid 16179
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.wlan[*].typename "\"Ieee80211Nic\""
+param **.wlan[*].mac.address "\"auto\""
+param **.wlan[*].radioType "\"Ieee80211ScalarRadio\""
+param **.wlan[*].radio.transmitter.power 100mW
+param **.wlan[*].radio.receiver.sensitivity -85dBm
+param **.wlan[*].radio.receiver.snirThreshold 4dB
+param **.wlan[*].radio.displayCommunicationRange true
+param **.attackHost[*].wlan[*].bitrate 2Mbps
+param **.host[*].wlan[*].bitrate 2Mbps
+param **.wlan[*].mac.maxQueueSize 14
+param **.wlan[*].mac.rtsThresholdBytes 3000B
+param **.wlan[*].mac.retryLimit 7
+param **.wlan[*].mac.cwMinData 7
+param *.radioMedium.pathLossType "\"NakagamiFading\""
+param *.radioMedium.pathLoss.alpha 2
+param **.host[*].routingProtocol "\"OLSR\""
+param **.attackHost[*].mobilityType "\"StationaryMobility\""
+param **.attackHost[*].mobility.initFromDisplayString false
+param **.host[*].mobilityType "\"MassMobility\""
+param **.host[*].mobility.initFromDisplayString false
+param **.host[*].mobility.changeInterval "truncnormal(2s, 0.5s)"
+param **.host[*].mobility.changeAngleBy "normal(0deg, 30deg)"
+param **.host[*].mobility.speed "truncnormal(20mps, 8mps)"
+param **.host[*].mobility.updateInterval 100ms
+param **.mobility.constraintAreaMinZ 0m
+param **.mobility.constraintAreaMaxZ 0m
+param **.mobility.constraintAreaMinX 0m
+param **.mobility.constraintAreaMinY 0m
+param **.mobility.constraintAreaMaxX 400m
+param **.mobility.constraintAreaMaxY 300m
+param **.pingTestApp[*].continuous true
+param *.host[*].numPingTestApps 1
+param *.host[*].pingTestApp[0].startTime uniform(1s,5s)
+param *.host[*].pingTestApp[0].printPing true
+param *.host[*].pingTestApp[0].destAddr "\"*\""
+param *.attackHost[*].numPingTestApps 1
+param *.attackHost[*].pingTestApp[0].startTime uniform(1s,5s)
+param *.attackHost[*].pingTestApp[0].destAddr "\"*\""
+
+scalar UAVNetwork hackForCreateResultsFolder 0
+scalar UAVNetwork.radioMedium.propagation "Arrival computation count" 408960
+scalar UAVNetwork.radioMedium "transmission count" 40896
+scalar UAVNetwork.radioMedium "radio frame send count" 408960
+scalar UAVNetwork.radioMedium "reception computation count" 408960
+scalar UAVNetwork.radioMedium "interference computation count" 1267588
+scalar UAVNetwork.radioMedium "reception decision computation count" 403780
+scalar UAVNetwork.radioMedium "listening decision computation count" 454872
+scalar UAVNetwork.radioMedium "reception cache hit" 85.637544671956
+attr unit %
+scalar UAVNetwork.radioMedium "interference cache hit" 66.666666666667
+attr unit %
+scalar UAVNetwork.radioMedium "noise cache hit" 0
+attr unit %
+scalar UAVNetwork.radioMedium "snir cache hit" 50
+attr unit %
+scalar UAVNetwork.radioMedium "reception decision cache hit" 50
+attr unit %
+scalar UAVNetwork.radioMedium "reception result cache hit" 0
+attr unit %
+scalar UAVNetwork.host[0].networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar UAVNetwork.host[0].networkLayer.arp completedARPResolution:count 186
+attr title "ARP completed resolutions, count"
+scalar UAVNetwork.host[0].networkLayer.arp initiatedARPResolution:count 13
+attr title "ARP initiated resolutions, count"
+scalar UAVNetwork.host[0].networkLayer.arp sentReply:count 65
+attr title "ARP replies sent, count"
+scalar UAVNetwork.host[0].networkLayer.arp sentReq:count 14
+attr title "ARP request sent, count"
+scalar UAVNetwork.host[0].lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar UAVNetwork.host[0].lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar UAVNetwork.host[0].lo0.lo rcvdPkFromHL:count 555
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UAVNetwork.host[0].lo0.lo rcvdPkFromHL:sum(packetBytes) 37296
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UAVNetwork.host[0].lo0.lo passedUpPk:count 555
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UAVNetwork.host[0].lo0.lo passedUpPk:sum(packetBytes) 37296
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar UAVNetwork.host[0].wlan[0].mac rcvdPkFromLL:count 35982
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar UAVNetwork.host[0].wlan[0].mac rcvdPkFromLL:sum(packetBytes) 2691988
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar UAVNetwork.host[0].wlan[0].mac sentDownPk:count 4461
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar UAVNetwork.host[0].wlan[0].mac sentDownPk:sum(packetBytes) 319428
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar UAVNetwork.host[0].wlan[0].mac rcvdPkFromHL:count 2501
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UAVNetwork.host[0].wlan[0].mac rcvdPkFromHL:sum(packetBytes) 287380
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UAVNetwork.host[0].wlan[0].mac passedUpPk:count 8111
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UAVNetwork.host[0].wlan[0].mac passedUpPk:sum(packetBytes) 906604
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+statistic UAVNetwork.host[0].wlan[0].radio radioChannel:histogram
+field count 1
+field mean 0
+field stddev -nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar UAVNetwork.host[0].wlan[0].radio transmissionState:count 17844
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar UAVNetwork.host[0].wlan[0].radio receptionState:count 80903
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar UAVNetwork.host[0].wlan[0].radio radioMode:count 8924
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic UAVNetwork.host[0].wlan[0].radio symbolErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic UAVNetwork.host[0].wlan[0].radio bitErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic UAVNetwork.host[0].wlan[0].radio packetErrorRate:histogram
+field count 35982
+field mean 0.00029721219478799
+field stddev 0.017007389895564
+field min 0
+field max 1
+field sum 10.694289192862
+field sqrsum 10.410729896402
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	35971
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+bin	0.52	0
+bin	0.54	0
+bin	0.56	0
+bin	0.58	0
+bin	0.6	0
+bin	0.62	0
+bin	0.64	0
+bin	0.66	0
+bin	0.68	0
+bin	0.7	0
+bin	0.72	0
+bin	0.74	0
+bin	0.76	0
+bin	0.78	0
+bin	0.8	1
+bin	0.82	0
+bin	0.84	0
+bin	0.86	1
+bin	0.88	0
+bin	0.9	0
+bin	0.92	0
+bin	0.94	0
+bin	0.96	0
+bin	0.98	2
+bin	1	7
+bin	1.02	0
+statistic UAVNetwork.host[0].wlan[0].radio minSNIR:histogram
+field count 35982
+field mean 218597.03066017
+field stddev 6202650.0937456
+field min 0.13472411199776
+field max 935107081.74585
+field sum 7865558357.2144
+field sqrsum 1.3860116578818e+18
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	35946
+bin	18000000	18
+bin	36000000	4
+bin	54000000	6
+bin	72000000	2
+bin	90000000	0
+bin	108000000	0
+bin	126000000	0
+bin	144000000	0
+bin	162000000	2
+bin	180000000	0
+bin	198000000	0
+bin	216000000	2
+bin	234000000	0
+bin	252000000	0
+bin	270000000	0
+bin	288000000	0
+bin	306000000	0
+bin	324000000	0
+bin	342000000	0
+bin	360000000	0
+bin	378000000	0
+bin	396000000	0
+bin	414000000	0
+bin	432000000	0
+bin	450000000	0
+bin	468000000	0
+bin	486000000	0
+bin	504000000	0
+bin	522000000	1
+bin	540000000	0
+bin	558000000	0
+bin	576000000	0
+bin	594000000	0
+bin	612000000	0
+bin	630000000	0
+bin	648000000	0
+bin	666000000	0
+bin	684000000	0
+bin	702000000	0
+bin	720000000	0
+bin	738000000	0
+bin	756000000	0
+bin	774000000	0
+bin	792000000	0
+bin	810000000	0
+bin	828000000	0
+bin	846000000	0
+bin	864000000	0
+bin	882000000	0
+bin	900000000	0
+bin	918000000	1
+bin	936000000	0
+scalar UAVNetwork.host[0].pingTestApp[0] "Pings sent" 1214
+scalar UAVNetwork.host[0].pingTestApp[0] "ping loss rate (%)" 27.182866556837
+scalar UAVNetwork.host[0].pingTestApp[0] "ping out-of-order rate (%)" 0.082372322899506
+scalar UAVNetwork.host[0].pingTestApp[0] pingRxSeq:count 884
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar UAVNetwork.host[0].pingTestApp[0] pingTxSeq:count 1214
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar UAVNetwork.host[0].pingTestApp[0] numOutOfOrderArrivals:last 1
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar UAVNetwork.host[0].pingTestApp[0] numLost:last 330
+attr interpolationmode none
+attr title "pings lost, last"
+statistic UAVNetwork.host[0].pingTestApp[0] rtt:histogram
+field count 773
+field mean 0.00307106239311
+field stddev 0.036085593517899
+field min 0.001652167517
+field max 1.005032260234
+field sum 2.373931229874
+field sqrsum 1.012565776888
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0	772
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+bin	0.52	0
+bin	0.54	0
+bin	0.56	0
+bin	0.58	0
+bin	0.6	0
+bin	0.62	0
+bin	0.64	0
+bin	0.66	0
+bin	0.68	0
+bin	0.7	0
+bin	0.72	0
+bin	0.74	0
+bin	0.76	0
+bin	0.78	0
+bin	0.8	0
+bin	0.82	0
+bin	0.84	0
+bin	0.86	0
+bin	0.88	0
+bin	0.9	0
+bin	0.92	0
+bin	0.94	0
+bin	0.96	0
+bin	0.98	0
+bin	1	1
+bin	1.02	0
+bin	1.04	0
+bin	1.06	0
+bin	1.08	0
+bin	1.1	0
+bin	1.12	0
+bin	1.14	0
+bin	1.16	0
+bin	1.18	0
+bin	1.2	0
+bin	1.22	0
+bin	1.24	0
+bin	1.26	0
+scalar UAVNetwork.host[1].networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar UAVNetwork.host[1].networkLayer.arp completedARPResolution:count 191
+attr title "ARP completed resolutions, count"
+scalar UAVNetwork.host[1].networkLayer.arp initiatedARPResolution:count 15
+attr title "ARP initiated resolutions, count"
+scalar UAVNetwork.host[1].networkLayer.arp sentReply:count 30
+attr title "ARP replies sent, count"
+scalar UAVNetwork.host[1].networkLayer.arp sentReq:count 15
+attr title "ARP request sent, count"
+scalar UAVNetwork.host[1].lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar UAVNetwork.host[1].lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar UAVNetwork.host[1].lo0.lo rcvdPkFromHL:count 556
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UAVNetwork.host[1].lo0.lo rcvdPkFromHL:sum(packetBytes) 37352
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UAVNetwork.host[1].lo0.lo passedUpPk:count 556
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UAVNetwork.host[1].lo0.lo passedUpPk:sum(packetBytes) 37352
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar UAVNetwork.host[1].wlan[0].mac rcvdPkFromLL:count 35983
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar UAVNetwork.host[1].wlan[0].mac rcvdPkFromLL:sum(packetBytes) 2691924
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar UAVNetwork.host[1].wlan[0].mac sentDownPk:count 4427
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar UAVNetwork.host[1].wlan[0].mac sentDownPk:sum(packetBytes) 317434
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar UAVNetwork.host[1].wlan[0].mac rcvdPkFromHL:count 2471
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UAVNetwork.host[1].wlan[0].mac rcvdPkFromHL:sum(packetBytes) 285916
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UAVNetwork.host[1].wlan[0].mac passedUpPk:count 8115
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UAVNetwork.host[1].wlan[0].mac passedUpPk:sum(packetBytes) 906576
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+statistic UAVNetwork.host[1].wlan[0].radio radioChannel:histogram
+field count 1
+field mean 0
+field stddev -nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar UAVNetwork.host[1].wlan[0].radio transmissionState:count 17708
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar UAVNetwork.host[1].wlan[0].radio receptionState:count 80836
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar UAVNetwork.host[1].wlan[0].radio radioMode:count 8856
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic UAVNetwork.host[1].wlan[0].radio symbolErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic UAVNetwork.host[1].wlan[0].radio bitErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic UAVNetwork.host[1].wlan[0].radio packetErrorRate:histogram
+field count 35983
+field mean 0.00025011811133023
+field stddev 0.015813364655339
+field min 0
+field max 1
+field sum 8.9999999999957
+field sqrsum 8.9999999999891
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	35974
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+bin	0.52	0
+bin	0.54	0
+bin	0.56	0
+bin	0.58	0
+bin	0.6	0
+bin	0.62	0
+bin	0.64	0
+bin	0.66	0
+bin	0.68	0
+bin	0.7	0
+bin	0.72	0
+bin	0.74	0
+bin	0.76	0
+bin	0.78	0
+bin	0.8	0
+bin	0.82	0
+bin	0.84	0
+bin	0.86	0
+bin	0.88	0
+bin	0.9	0
+bin	0.92	0
+bin	0.94	0
+bin	0.96	0
+bin	0.98	3
+bin	1	6
+bin	1.02	0
+statistic UAVNetwork.host[1].wlan[0].radio minSNIR:histogram
+field count 35983
+field mean 936224.81158717
+field stddev 59675297.30498
+field min 0.0028858294886573
+field max 8951940737.2187
+field sum 33688177395.341
+field sqrsum 1.2816851907134e+20
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	35970
+bin	168000000	5
+bin	336000000	0
+bin	504000000	1
+bin	672000000	2
+bin	840000000	0
+bin	1008000000	0
+bin	1176000000	0
+bin	1344000000	0
+bin	1512000000	0
+bin	1680000000	0
+bin	1848000000	1
+bin	2016000000	0
+bin	2184000000	0
+bin	2352000000	1
+bin	2520000000	0
+bin	2688000000	0
+bin	2856000000	0
+bin	3024000000	0
+bin	3192000000	0
+bin	3360000000	0
+bin	3528000000	0
+bin	3696000000	1
+bin	3864000000	0
+bin	4032000000	0
+bin	4200000000	0
+bin	4368000000	0
+bin	4536000000	0
+bin	4704000000	1
+bin	4872000000	0
+bin	5040000000	0
+bin	5208000000	0
+bin	5376000000	0
+bin	5544000000	0
+bin	5712000000	0
+bin	5880000000	0
+bin	6048000000	0
+bin	6216000000	0
+bin	6384000000	0
+bin	6552000000	0
+bin	6720000000	0
+bin	6888000000	0
+bin	7056000000	0
+bin	7224000000	0
+bin	7392000000	0
+bin	7560000000	0
+bin	7728000000	0
+bin	7896000000	0
+bin	8064000000	0
+bin	8232000000	0
+bin	8400000000	0
+bin	8568000000	0
+bin	8736000000	0
+bin	8904000000	1
+bin	9072000000	0
+scalar UAVNetwork.host[1].pingTestApp[0] "Pings sent" 1214
+scalar UAVNetwork.host[1].pingTestApp[0] "ping loss rate (%)" 27.265238879736
+scalar UAVNetwork.host[1].pingTestApp[0] "ping out-of-order rate (%)" 0
+scalar UAVNetwork.host[1].pingTestApp[0] pingRxSeq:count 883
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar UAVNetwork.host[1].pingTestApp[0] pingTxSeq:count 1214
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar UAVNetwork.host[1].pingTestApp[0] numOutOfOrderArrivals:last nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar UAVNetwork.host[1].pingTestApp[0] numLost:last 331
+attr interpolationmode none
+attr title "pings lost, last"
+statistic UAVNetwork.host[1].pingTestApp[0] rtt:histogram
+field count 772
+field mean 0.0017733385643756
+field stddev 0.00024862946567904
+field min 0.001652151667
+field max 0.004193898141
+field sum 1.369017371698
+field sqrsum 0.0024753919077704
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0.00125	0
+bin	0.0013	0
+bin	0.00135	0
+bin	0.0014	0
+bin	0.00145	0
+bin	0.0015	0
+bin	0.00155	0
+bin	0.0016	0
+bin	0.00165	253
+bin	0.0017	197
+bin	0.00175	292
+bin	0.0018	0
+bin	0.00185	0
+bin	0.0019	0
+bin	0.00195	0
+bin	0.002	1
+bin	0.00205	0
+bin	0.0021	0
+bin	0.00215	0
+bin	0.0022	0
+bin	0.00225	0
+bin	0.0023	0
+bin	0.00235	1
+bin	0.0024	0
+bin	0.00245	0
+bin	0.0025	0
+bin	0.00255	0
+bin	0.0026	0
+bin	0.00265	2
+bin	0.0027	1
+bin	0.00275	3
+bin	0.0028	0
+bin	0.00285	5
+bin	0.0029	5
+bin	0.00295	1
+bin	0.003	2
+bin	0.00305	2
+bin	0.0031	2
+bin	0.00315	2
+bin	0.0032	2
+bin	0.00325	0
+bin	0.0033	0
+bin	0.00335	0
+bin	0.0034	0
+bin	0.00345	0
+bin	0.0035	0
+bin	0.00355	0
+bin	0.0036	0
+bin	0.00365	0
+bin	0.0037	0
+bin	0.00375	0
+bin	0.0038	0
+bin	0.00385	0
+bin	0.0039	0
+bin	0.00395	0
+bin	0.004	0
+bin	0.00405	0
+bin	0.0041	0
+bin	0.00415	1
+bin	0.0042	0
+scalar UAVNetwork.host[2].networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar UAVNetwork.host[2].networkLayer.arp completedARPResolution:count 181
+attr title "ARP completed resolutions, count"
+scalar UAVNetwork.host[2].networkLayer.arp initiatedARPResolution:count 11
+attr title "ARP initiated resolutions, count"
+scalar UAVNetwork.host[2].networkLayer.arp sentReply:count 32
+attr title "ARP replies sent, count"
+scalar UAVNetwork.host[2].networkLayer.arp sentReq:count 11
+attr title "ARP request sent, count"
+scalar UAVNetwork.host[2].lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar UAVNetwork.host[2].lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar UAVNetwork.host[2].lo0.lo rcvdPkFromHL:count 555
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UAVNetwork.host[2].lo0.lo rcvdPkFromHL:sum(packetBytes) 37296
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UAVNetwork.host[2].lo0.lo passedUpPk:count 555
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UAVNetwork.host[2].lo0.lo passedUpPk:sum(packetBytes) 37296
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar UAVNetwork.host[2].wlan[0].mac rcvdPkFromLL:count 35996
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar UAVNetwork.host[2].wlan[0].mac rcvdPkFromLL:sum(packetBytes) 2693862
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar UAVNetwork.host[2].wlan[0].mac sentDownPk:count 4422
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar UAVNetwork.host[2].wlan[0].mac sentDownPk:sum(packetBytes) 316510
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar UAVNetwork.host[2].wlan[0].mac rcvdPkFromHL:count 2460
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UAVNetwork.host[2].wlan[0].mac rcvdPkFromHL:sum(packetBytes) 284908
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UAVNetwork.host[2].wlan[0].mac passedUpPk:count 8129
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UAVNetwork.host[2].wlan[0].mac passedUpPk:sum(packetBytes) 908112
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+statistic UAVNetwork.host[2].wlan[0].radio radioChannel:histogram
+field count 1
+field mean 0
+field stddev -nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar UAVNetwork.host[2].wlan[0].radio transmissionState:count 17688
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar UAVNetwork.host[2].wlan[0].radio receptionState:count 80852
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar UAVNetwork.host[2].wlan[0].radio radioMode:count 8846
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic UAVNetwork.host[2].wlan[0].radio symbolErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic UAVNetwork.host[2].wlan[0].radio bitErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic UAVNetwork.host[2].wlan[0].radio packetErrorRate:histogram
+field count 35996
+field mean 0.00020684523145336
+field stddev 0.014131056321031
+field min 0
+field max 1
+field sum 7.4456009513951
+field sqrsum 7.1892647522218
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	35988
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	1
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+bin	0.52	0
+bin	0.54	0
+bin	0.56	0
+bin	0.58	0
+bin	0.6	0
+bin	0.62	0
+bin	0.64	0
+bin	0.66	0
+bin	0.68	0
+bin	0.7	0
+bin	0.72	0
+bin	0.74	0
+bin	0.76	0
+bin	0.78	0
+bin	0.8	0
+bin	0.82	0
+bin	0.84	0
+bin	0.86	0
+bin	0.88	0
+bin	0.9	0
+bin	0.92	0
+bin	0.94	0
+bin	0.96	0
+bin	0.98	0
+bin	1	7
+bin	1.02	0
+statistic UAVNetwork.host[2].wlan[0].radio minSNIR:histogram
+field count 35996
+field mean 464294.05314633
+field stddev 42509451.790022
+field min 0.045703768489957
+field max 8022128363.1996
+field sum 16712728737.055
+field sqrsum 6.5052650046683e+19
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	35991
+bin	136080000	2
+bin	272160000	1
+bin	408240000	0
+bin	544320000	1
+bin	680400000	0
+bin	816480000	0
+bin	952560000	0
+bin	1088640000	0
+bin	1224720000	0
+bin	1360800000	0
+bin	1496880000	0
+bin	1632960000	0
+bin	1769040000	0
+bin	1905120000	0
+bin	2041200000	0
+bin	2177280000	0
+bin	2313360000	0
+bin	2449440000	0
+bin	2585520000	0
+bin	2721600000	0
+bin	2857680000	0
+bin	2993760000	0
+bin	3129840000	0
+bin	3265920000	0
+bin	3402000000	0
+bin	3538080000	0
+bin	3674160000	0
+bin	3810240000	0
+bin	3946320000	0
+bin	4082400000	0
+bin	4218480000	0
+bin	4354560000	0
+bin	4490640000	0
+bin	4626720000	0
+bin	4762800000	0
+bin	4898880000	0
+bin	5034960000	0
+bin	5171040000	0
+bin	5307120000	0
+bin	5443200000	0
+bin	5579280000	0
+bin	5715360000	0
+bin	5851440000	0
+bin	5987520000	0
+bin	6123600000	0
+bin	6259680000	0
+bin	6395760000	0
+bin	6531840000	0
+bin	6667920000	0
+bin	6804000000	0
+bin	6940080000	0
+bin	7076160000	0
+bin	7212240000	0
+bin	7348320000	0
+bin	7484400000	0
+bin	7620480000	0
+bin	7756560000	0
+bin	7892640000	1
+bin	8028720000	0
+scalar UAVNetwork.host[2].pingTestApp[0] "Pings sent" 1214
+scalar UAVNetwork.host[2].pingTestApp[0] "ping loss rate (%)" 27.265238879736
+scalar UAVNetwork.host[2].pingTestApp[0] "ping out-of-order rate (%)" 0
+scalar UAVNetwork.host[2].pingTestApp[0] pingRxSeq:count 883
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar UAVNetwork.host[2].pingTestApp[0] pingTxSeq:count 1214
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar UAVNetwork.host[2].pingTestApp[0] numOutOfOrderArrivals:last nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar UAVNetwork.host[2].pingTestApp[0] numLost:last 331
+attr interpolationmode none
+attr title "pings lost, last"
+statistic UAVNetwork.host[2].pingTestApp[0] rtt:histogram
+field count 772
+field mean 0.0017827773646386
+field stddev 0.00027612510398863
+field min 0.00165215125
+field max 0.003934251117
+field sum 1.376304125501
+field sqrsum 0.0025124287931256
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0.0013	0
+bin	0.00135	0
+bin	0.0014	0
+bin	0.00145	0
+bin	0.0015	0
+bin	0.00155	0
+bin	0.0016	0
+bin	0.00165	272
+bin	0.0017	192
+bin	0.00175	270
+bin	0.0018	0
+bin	0.00185	0
+bin	0.0019	0
+bin	0.00195	0
+bin	0.002	0
+bin	0.00205	0
+bin	0.0021	1
+bin	0.00215	0
+bin	0.0022	0
+bin	0.00225	0
+bin	0.0023	0
+bin	0.00235	0
+bin	0.0024	1
+bin	0.00245	0
+bin	0.0025	0
+bin	0.00255	0
+bin	0.0026	0
+bin	0.00265	3
+bin	0.0027	1
+bin	0.00275	5
+bin	0.0028	3
+bin	0.00285	1
+bin	0.0029	2
+bin	0.00295	6
+bin	0.003	5
+bin	0.00305	5
+bin	0.0031	1
+bin	0.00315	1
+bin	0.0032	1
+bin	0.00325	0
+bin	0.0033	0
+bin	0.00335	0
+bin	0.0034	0
+bin	0.00345	0
+bin	0.0035	0
+bin	0.00355	0
+bin	0.0036	0
+bin	0.00365	0
+bin	0.0037	1
+bin	0.00375	0
+bin	0.0038	0
+bin	0.00385	0
+bin	0.0039	1
+bin	0.00395	0
+scalar UAVNetwork.host[3].networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar UAVNetwork.host[3].networkLayer.arp completedARPResolution:count 174
+attr title "ARP completed resolutions, count"
+scalar UAVNetwork.host[3].networkLayer.arp initiatedARPResolution:count 17
+attr title "ARP initiated resolutions, count"
+scalar UAVNetwork.host[3].networkLayer.arp sentReply:count 11
+attr title "ARP replies sent, count"
+scalar UAVNetwork.host[3].networkLayer.arp sentReq:count 18
+attr title "ARP request sent, count"
+scalar UAVNetwork.host[3].lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar UAVNetwork.host[3].lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar UAVNetwork.host[3].lo0.lo rcvdPkFromHL:count 553
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UAVNetwork.host[3].lo0.lo rcvdPkFromHL:sum(packetBytes) 37128
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UAVNetwork.host[3].lo0.lo passedUpPk:count 553
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UAVNetwork.host[3].lo0.lo passedUpPk:sum(packetBytes) 37128
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar UAVNetwork.host[3].wlan[0].mac rcvdPkFromLL:count 36011
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar UAVNetwork.host[3].wlan[0].mac rcvdPkFromLL:sum(packetBytes) 2693908
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar UAVNetwork.host[3].wlan[0].mac sentDownPk:count 4420
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar UAVNetwork.host[3].wlan[0].mac sentDownPk:sum(packetBytes) 316550
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar UAVNetwork.host[3].wlan[0].mac rcvdPkFromHL:count 2448
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UAVNetwork.host[3].wlan[0].mac rcvdPkFromHL:sum(packetBytes) 284172
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UAVNetwork.host[3].wlan[0].mac passedUpPk:count 8128
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UAVNetwork.host[3].wlan[0].mac passedUpPk:sum(packetBytes) 908176
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+statistic UAVNetwork.host[3].wlan[0].radio radioChannel:histogram
+field count 1
+field mean 0
+field stddev -nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar UAVNetwork.host[3].wlan[0].radio transmissionState:count 17680
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar UAVNetwork.host[3].wlan[0].radio receptionState:count 80877
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar UAVNetwork.host[3].wlan[0].radio radioMode:count 8842
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic UAVNetwork.host[3].wlan[0].radio symbolErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic UAVNetwork.host[3].wlan[0].radio bitErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic UAVNetwork.host[3].wlan[0].radio packetErrorRate:histogram
+field count 36011
+field mean 0.00027499541005575
+field stddev 0.016507326512633
+field min 0
+field max 1
+field sum 9.9028597115177
+field sqrsum 9.8151539886616
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	36001
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+bin	0.52	0
+bin	0.54	0
+bin	0.56	0
+bin	0.58	0
+bin	0.6	0
+bin	0.62	0
+bin	0.64	0
+bin	0.66	0
+bin	0.68	0
+bin	0.7	0
+bin	0.72	0
+bin	0.74	0
+bin	0.76	0
+bin	0.78	0
+bin	0.8	0
+bin	0.82	0
+bin	0.84	0
+bin	0.86	0
+bin	0.88	0
+bin	0.9	1
+bin	0.92	0
+bin	0.94	0
+bin	0.96	0
+bin	0.98	1
+bin	1	8
+bin	1.02	0
+statistic UAVNetwork.host[3].wlan[0].radio minSNIR:histogram
+field count 36011
+field mean 519834.48807046
+field stddev 25706016.032313
+field min 0.044437577547173
+field max 3239576056.1338
+field sum 18719759749.905
+field sqrsum 2.3805112538457e+19
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	35984
+bin	59000000	12
+bin	118000000	4
+bin	177000000	1
+bin	236000000	0
+bin	295000000	2
+bin	354000000	0
+bin	413000000	1
+bin	472000000	0
+bin	531000000	2
+bin	590000000	0
+bin	649000000	1
+bin	708000000	0
+bin	767000000	0
+bin	826000000	0
+bin	885000000	1
+bin	944000000	0
+bin	1003000000	0
+bin	1062000000	0
+bin	1121000000	0
+bin	1180000000	0
+bin	1239000000	0
+bin	1298000000	0
+bin	1357000000	0
+bin	1416000000	0
+bin	1475000000	0
+bin	1534000000	0
+bin	1593000000	1
+bin	1652000000	0
+bin	1711000000	0
+bin	1770000000	0
+bin	1829000000	0
+bin	1888000000	0
+bin	1947000000	0
+bin	2006000000	0
+bin	2065000000	0
+bin	2124000000	0
+bin	2183000000	0
+bin	2242000000	0
+bin	2301000000	0
+bin	2360000000	0
+bin	2419000000	0
+bin	2478000000	0
+bin	2537000000	0
+bin	2596000000	0
+bin	2655000000	0
+bin	2714000000	0
+bin	2773000000	1
+bin	2832000000	0
+bin	2891000000	0
+bin	2950000000	0
+bin	3009000000	0
+bin	3068000000	0
+bin	3127000000	0
+bin	3186000000	1
+bin	3245000000	0
+scalar UAVNetwork.host[3].pingTestApp[0] "Pings sent" 1213
+scalar UAVNetwork.host[3].pingTestApp[0] "ping loss rate (%)" 27.205276174773
+scalar UAVNetwork.host[3].pingTestApp[0] "ping out-of-order rate (%)" 0
+scalar UAVNetwork.host[3].pingTestApp[0] pingRxSeq:count 883
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar UAVNetwork.host[3].pingTestApp[0] pingTxSeq:count 1213
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar UAVNetwork.host[3].pingTestApp[0] numOutOfOrderArrivals:last nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar UAVNetwork.host[3].pingTestApp[0] numLost:last 330
+attr interpolationmode none
+attr title "pings lost, last"
+statistic UAVNetwork.host[3].pingTestApp[0] rtt:histogram
+field count 773
+field mean 0.001790346925423
+field stddev 0.00028355303795571
+field min 0.001652032369
+field max 0.003227001924
+field sum 1.383938173352
+field sqrsum 0.0025398000487941
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0.00125	0
+bin	0.0013	0
+bin	0.00135	0
+bin	0.0014	0
+bin	0.00145	0
+bin	0.0015	0
+bin	0.00155	0
+bin	0.0016	0
+bin	0.00165	294
+bin	0.0017	168
+bin	0.00175	264
+bin	0.0018	0
+bin	0.00185	0
+bin	0.0019	0
+bin	0.00195	2
+bin	0.002	0
+bin	0.00205	0
+bin	0.0021	0
+bin	0.00215	0
+bin	0.0022	0
+bin	0.00225	1
+bin	0.0023	1
+bin	0.00235	1
+bin	0.0024	0
+bin	0.00245	0
+bin	0.0025	0
+bin	0.00255	0
+bin	0.0026	0
+bin	0.00265	2
+bin	0.0027	0
+bin	0.00275	6
+bin	0.0028	8
+bin	0.00285	7
+bin	0.0029	2
+bin	0.00295	1
+bin	0.003	2
+bin	0.00305	5
+bin	0.0031	5
+bin	0.00315	3
+bin	0.0032	1
+bin	0.00325	0
+bin	0.0033	0
+bin	0.00335	0
+bin	0.0034	0
+bin	0.00345	0
+bin	0.0035	0
+scalar UAVNetwork.host[4].networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar UAVNetwork.host[4].networkLayer.arp completedARPResolution:count 164
+attr title "ARP completed resolutions, count"
+scalar UAVNetwork.host[4].networkLayer.arp initiatedARPResolution:count 13
+attr title "ARP initiated resolutions, count"
+scalar UAVNetwork.host[4].networkLayer.arp sentReply:count 19
+attr title "ARP replies sent, count"
+scalar UAVNetwork.host[4].networkLayer.arp sentReq:count 15
+attr title "ARP request sent, count"
+scalar UAVNetwork.host[4].lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar UAVNetwork.host[4].lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar UAVNetwork.host[4].lo0.lo rcvdPkFromHL:count 551
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UAVNetwork.host[4].lo0.lo rcvdPkFromHL:sum(packetBytes) 37016
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UAVNetwork.host[4].lo0.lo passedUpPk:count 551
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UAVNetwork.host[4].lo0.lo passedUpPk:sum(packetBytes) 37016
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar UAVNetwork.host[4].wlan[0].mac rcvdPkFromLL:count 36009
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar UAVNetwork.host[4].wlan[0].mac rcvdPkFromLL:sum(packetBytes) 2694950
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar UAVNetwork.host[4].wlan[0].mac sentDownPk:count 4402
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar UAVNetwork.host[4].wlan[0].mac sentDownPk:sum(packetBytes) 316330
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar UAVNetwork.host[4].wlan[0].mac rcvdPkFromHL:count 2456
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UAVNetwork.host[4].wlan[0].mac rcvdPkFromHL:sum(packetBytes) 284584
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UAVNetwork.host[4].wlan[0].mac passedUpPk:count 8105
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UAVNetwork.host[4].wlan[0].mac passedUpPk:sum(packetBytes) 905584
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+statistic UAVNetwork.host[4].wlan[0].radio radioChannel:histogram
+field count 1
+field mean 0
+field stddev -nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar UAVNetwork.host[4].wlan[0].radio transmissionState:count 17608
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar UAVNetwork.host[4].wlan[0].radio receptionState:count 80842
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar UAVNetwork.host[4].wlan[0].radio radioMode:count 8806
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic UAVNetwork.host[4].wlan[0].radio symbolErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic UAVNetwork.host[4].wlan[0].radio bitErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic UAVNetwork.host[4].wlan[0].radio packetErrorRate:histogram
+field count 36009
+field mean 0.00022332879553241
+field stddev 0.014905051054941
+field min 0
+field max 1
+field sum 8.0418465983265
+field sqrsum 8.0013529505051
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	36000
+bin	0.02	1
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+bin	0.52	0
+bin	0.54	0
+bin	0.56	0
+bin	0.58	0
+bin	0.6	0
+bin	0.62	0
+bin	0.64	0
+bin	0.66	0
+bin	0.68	0
+bin	0.7	0
+bin	0.72	0
+bin	0.74	0
+bin	0.76	0
+bin	0.78	0
+bin	0.8	0
+bin	0.82	0
+bin	0.84	0
+bin	0.86	0
+bin	0.88	0
+bin	0.9	0
+bin	0.92	0
+bin	0.94	0
+bin	0.96	0
+bin	0.98	3
+bin	1	5
+bin	1.02	0
+statistic UAVNetwork.host[4].wlan[0].radio minSNIR:histogram
+field count 36009
+field mean 134431.91136237
+field stddev 926794.79506269
+field min 0.00074517560266031
+field max 59859842.327186
+field sum 4840758696.2474
+field sqrsum 3.1579773350308e+16
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	35263
+bin	960000	410
+bin	1920000	141
+bin	2880000	46
+bin	3840000	31
+bin	4800000	25
+bin	5760000	22
+bin	6720000	7
+bin	7680000	3
+bin	8640000	6
+bin	9600000	7
+bin	10560000	7
+bin	11520000	4
+bin	12480000	7
+bin	13440000	2
+bin	14400000	1
+bin	15360000	2
+bin	16320000	3
+bin	17280000	1
+bin	18240000	3
+bin	19200000	0
+bin	20160000	0
+bin	21120000	4
+bin	22080000	1
+bin	23040000	0
+bin	24000000	2
+bin	24960000	1
+bin	25920000	1
+bin	26880000	2
+bin	27840000	1
+bin	28800000	1
+bin	29760000	0
+bin	30720000	0
+bin	31680000	0
+bin	32640000	0
+bin	33600000	0
+bin	34560000	1
+bin	35520000	0
+bin	36480000	0
+bin	37440000	0
+bin	38400000	0
+bin	39360000	0
+bin	40320000	0
+bin	41280000	0
+bin	42240000	0
+bin	43200000	0
+bin	44160000	2
+bin	45120000	0
+bin	46080000	0
+bin	47040000	1
+bin	48000000	0
+bin	48960000	0
+bin	49920000	0
+bin	50880000	0
+bin	51840000	0
+bin	52800000	0
+bin	53760000	0
+bin	54720000	0
+bin	55680000	0
+bin	56640000	0
+bin	57600000	0
+bin	58560000	0
+bin	59520000	1
+bin	60480000	0
+scalar UAVNetwork.host[4].pingTestApp[0] "Pings sent" 1214
+scalar UAVNetwork.host[4].pingTestApp[0] "ping loss rate (%)" 27.347611202636
+scalar UAVNetwork.host[4].pingTestApp[0] "ping out-of-order rate (%)" 0.16474464579901
+scalar UAVNetwork.host[4].pingTestApp[0] pingRxSeq:count 882
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar UAVNetwork.host[4].pingTestApp[0] pingTxSeq:count 1214
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar UAVNetwork.host[4].pingTestApp[0] numOutOfOrderArrivals:last 2
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar UAVNetwork.host[4].pingTestApp[0] numLost:last 332
+attr interpolationmode none
+attr title "pings lost, last"
+statistic UAVNetwork.host[4].pingTestApp[0] rtt:histogram
+field count 772
+field mean 0.005694906251671
+field stddev 0.06244078201959
+field min 0.001652098883
+field max 1.006310496318
+field sum 4.39646762629
+field sqrsum 3.0310517918273
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0	769
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+bin	0.52	0
+bin	0.54	0
+bin	0.56	0
+bin	0.58	0
+bin	0.6	0
+bin	0.62	0
+bin	0.64	0
+bin	0.66	0
+bin	0.68	0
+bin	0.7	0
+bin	0.72	0
+bin	0.74	0
+bin	0.76	0
+bin	0.78	0
+bin	0.8	0
+bin	0.82	0
+bin	0.84	0
+bin	0.86	0
+bin	0.88	0
+bin	0.9	0
+bin	0.92	0
+bin	0.94	0
+bin	0.96	0
+bin	0.98	0
+bin	1	3
+bin	1.02	0
+scalar UAVNetwork.host[5].networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar UAVNetwork.host[5].networkLayer.arp completedARPResolution:count 166
+attr title "ARP completed resolutions, count"
+scalar UAVNetwork.host[5].networkLayer.arp initiatedARPResolution:count 15
+attr title "ARP initiated resolutions, count"
+scalar UAVNetwork.host[5].networkLayer.arp sentReply:count 10
+attr title "ARP replies sent, count"
+scalar UAVNetwork.host[5].networkLayer.arp sentReq:count 15
+attr title "ARP request sent, count"
+scalar UAVNetwork.host[5].lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar UAVNetwork.host[5].lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar UAVNetwork.host[5].lo0.lo rcvdPkFromHL:count 550
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UAVNetwork.host[5].lo0.lo rcvdPkFromHL:sum(packetBytes) 36960
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UAVNetwork.host[5].lo0.lo passedUpPk:count 550
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UAVNetwork.host[5].lo0.lo passedUpPk:sum(packetBytes) 36960
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar UAVNetwork.host[5].wlan[0].mac rcvdPkFromLL:count 35993
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar UAVNetwork.host[5].wlan[0].mac rcvdPkFromLL:sum(packetBytes) 2693216
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar UAVNetwork.host[5].wlan[0].mac sentDownPk:count 4406
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar UAVNetwork.host[5].wlan[0].mac sentDownPk:sum(packetBytes) 316262
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar UAVNetwork.host[5].wlan[0].mac rcvdPkFromHL:count 2447
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UAVNetwork.host[5].wlan[0].mac rcvdPkFromHL:sum(packetBytes) 283960
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UAVNetwork.host[5].wlan[0].mac passedUpPk:count 8117
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UAVNetwork.host[5].wlan[0].mac passedUpPk:sum(packetBytes) 906896
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+statistic UAVNetwork.host[5].wlan[0].radio radioChannel:histogram
+field count 1
+field mean 0
+field stddev -nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar UAVNetwork.host[5].wlan[0].radio transmissionState:count 17624
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar UAVNetwork.host[5].wlan[0].radio receptionState:count 80813
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar UAVNetwork.host[5].wlan[0].radio radioMode:count 8814
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic UAVNetwork.host[5].wlan[0].radio symbolErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic UAVNetwork.host[5].wlan[0].radio bitErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic UAVNetwork.host[5].wlan[0].radio packetErrorRate:histogram
+field count 35993
+field mean 0.00026292078150023
+field stddev 0.015868395314098
+field min 0
+field max 1
+field sum 9.4633076885378
+field sqrsum 9.0654885668954
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	35983
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+bin	0.52	0
+bin	0.54	0
+bin	0.56	0
+bin	0.58	0
+bin	0.6	0
+bin	0.62	0
+bin	0.64	0
+bin	0.66	1
+bin	0.68	0
+bin	0.7	0
+bin	0.72	0
+bin	0.74	0
+bin	0.76	0
+bin	0.78	0
+bin	0.8	0
+bin	0.82	1
+bin	0.84	0
+bin	0.86	0
+bin	0.88	0
+bin	0.9	0
+bin	0.92	0
+bin	0.94	0
+bin	0.96	1
+bin	0.98	1
+bin	1	6
+bin	1.02	0
+statistic UAVNetwork.host[5].wlan[0].radio minSNIR:histogram
+field count 35993
+field mean 270000.2601009
+field stddev 10122264.217805
+field min 0.034585564004197
+field max 1722209777.8617
+field sum 9718119361.8116
+field sqrsum 3.6903725971139e+18
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	35967
+bin	30240000	12
+bin	60480000	6
+bin	90720000	2
+bin	120960000	0
+bin	151200000	1
+bin	181440000	1
+bin	211680000	1
+bin	241920000	0
+bin	272160000	0
+bin	302400000	0
+bin	332640000	0
+bin	362880000	1
+bin	393120000	0
+bin	423360000	0
+bin	453600000	0
+bin	483840000	0
+bin	514080000	0
+bin	544320000	0
+bin	574560000	0
+bin	604800000	1
+bin	635040000	0
+bin	665280000	0
+bin	695520000	0
+bin	725760000	0
+bin	756000000	0
+bin	786240000	0
+bin	816480000	0
+bin	846720000	0
+bin	876960000	0
+bin	907200000	0
+bin	937440000	0
+bin	967680000	0
+bin	997920000	0
+bin	1028160000	0
+bin	1058400000	0
+bin	1088640000	0
+bin	1118880000	0
+bin	1149120000	0
+bin	1179360000	0
+bin	1209600000	0
+bin	1239840000	0
+bin	1270080000	0
+bin	1300320000	0
+bin	1330560000	0
+bin	1360800000	0
+bin	1391040000	0
+bin	1421280000	0
+bin	1451520000	0
+bin	1481760000	0
+bin	1512000000	0
+bin	1542240000	0
+bin	1572480000	0
+bin	1602720000	0
+bin	1632960000	0
+bin	1663200000	0
+bin	1693440000	1
+bin	1723680000	0
+scalar UAVNetwork.host[5].pingTestApp[0] "Pings sent" 1213
+scalar UAVNetwork.host[5].pingTestApp[0] "ping loss rate (%)" 27.205276174773
+scalar UAVNetwork.host[5].pingTestApp[0] "ping out-of-order rate (%)" 0
+scalar UAVNetwork.host[5].pingTestApp[0] pingRxSeq:count 883
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar UAVNetwork.host[5].pingTestApp[0] pingTxSeq:count 1213
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar UAVNetwork.host[5].pingTestApp[0] numOutOfOrderArrivals:last nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar UAVNetwork.host[5].pingTestApp[0] numLost:last 330
+attr interpolationmode none
+attr title "pings lost, last"
+statistic UAVNetwork.host[5].pingTestApp[0] rtt:histogram
+field count 773
+field mean 0.0017995312032988
+field stddev 0.00031809034807431
+field min 0.001652090317
+field max 0.004171716489
+field sum 1.39103762015
+field sqrsum 0.0025813276969058
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0.0012	0
+bin	0.00125	0
+bin	0.0013	0
+bin	0.00135	0
+bin	0.0014	0
+bin	0.00145	0
+bin	0.0015	0
+bin	0.00155	0
+bin	0.0016	0
+bin	0.00165	284
+bin	0.0017	181
+bin	0.00175	258
+bin	0.0018	1
+bin	0.00185	0
+bin	0.0019	0
+bin	0.00195	0
+bin	0.002	0
+bin	0.00205	0
+bin	0.0021	0
+bin	0.00215	0
+bin	0.0022	0
+bin	0.00225	0
+bin	0.0023	0
+bin	0.00235	3
+bin	0.0024	0
+bin	0.00245	2
+bin	0.0025	1
+bin	0.00255	0
+bin	0.0026	1
+bin	0.00265	2
+bin	0.0027	2
+bin	0.00275	7
+bin	0.0028	4
+bin	0.00285	1
+bin	0.0029	5
+bin	0.00295	2
+bin	0.003	3
+bin	0.00305	0
+bin	0.0031	2
+bin	0.00315	7
+bin	0.0032	3
+bin	0.00325	1
+bin	0.0033	0
+bin	0.00335	0
+bin	0.0034	0
+bin	0.00345	0
+bin	0.0035	0
+bin	0.00355	0
+bin	0.0036	0
+bin	0.00365	0
+bin	0.0037	0
+bin	0.00375	0
+bin	0.0038	0
+bin	0.00385	0
+bin	0.0039	1
+bin	0.00395	0
+bin	0.004	0
+bin	0.00405	0
+bin	0.0041	1
+bin	0.00415	1
+bin	0.0042	0
+scalar UAVNetwork.host[6].networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar UAVNetwork.host[6].networkLayer.arp completedARPResolution:count 159
+attr title "ARP completed resolutions, count"
+scalar UAVNetwork.host[6].networkLayer.arp initiatedARPResolution:count 19
+attr title "ARP initiated resolutions, count"
+scalar UAVNetwork.host[6].networkLayer.arp sentReply:count 7
+attr title "ARP replies sent, count"
+scalar UAVNetwork.host[6].networkLayer.arp sentReq:count 19
+attr title "ARP request sent, count"
+scalar UAVNetwork.host[6].lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar UAVNetwork.host[6].lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar UAVNetwork.host[6].lo0.lo rcvdPkFromHL:count 550
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UAVNetwork.host[6].lo0.lo rcvdPkFromHL:sum(packetBytes) 36960
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UAVNetwork.host[6].lo0.lo passedUpPk:count 550
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UAVNetwork.host[6].lo0.lo passedUpPk:sum(packetBytes) 36960
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar UAVNetwork.host[6].wlan[0].mac rcvdPkFromLL:count 35958
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar UAVNetwork.host[6].wlan[0].mac rcvdPkFromLL:sum(packetBytes) 2691772
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar UAVNetwork.host[6].wlan[0].mac sentDownPk:count 4415
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar UAVNetwork.host[6].wlan[0].mac sentDownPk:sum(packetBytes) 316772
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar UAVNetwork.host[6].wlan[0].mac rcvdPkFromHL:count 2450
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UAVNetwork.host[6].wlan[0].mac rcvdPkFromHL:sum(packetBytes) 284124
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UAVNetwork.host[6].wlan[0].mac passedUpPk:count 8098
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UAVNetwork.host[6].wlan[0].mac passedUpPk:sum(packetBytes) 905052
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+statistic UAVNetwork.host[6].wlan[0].radio radioChannel:histogram
+field count 1
+field mean 0
+field stddev -nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar UAVNetwork.host[6].wlan[0].radio transmissionState:count 17660
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar UAVNetwork.host[6].wlan[0].radio receptionState:count 80759
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar UAVNetwork.host[6].wlan[0].radio radioMode:count 8832
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic UAVNetwork.host[6].wlan[0].radio symbolErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic UAVNetwork.host[6].wlan[0].radio bitErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic UAVNetwork.host[6].wlan[0].radio packetErrorRate:histogram
+field count 35958
+field mean 0.00019467156125138
+field stddev 0.013951310948302
+field min 0
+field max 1
+field sum 6.999999999477
+field sqrsum 6.9999999989541
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	35951
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+bin	0.52	0
+bin	0.54	0
+bin	0.56	0
+bin	0.58	0
+bin	0.6	0
+bin	0.62	0
+bin	0.64	0
+bin	0.66	0
+bin	0.68	0
+bin	0.7	0
+bin	0.72	0
+bin	0.74	0
+bin	0.76	0
+bin	0.78	0
+bin	0.8	0
+bin	0.82	0
+bin	0.84	0
+bin	0.86	0
+bin	0.88	0
+bin	0.9	0
+bin	0.92	0
+bin	0.94	0
+bin	0.96	0
+bin	0.98	3
+bin	1	4
+bin	1.02	0
+statistic UAVNetwork.host[6].wlan[0].radio minSNIR:histogram
+field count 35958
+field mean 183642.88984341
+field stddev 2394687.2818665
+field min 0.0063695801380905
+field max 221977165.9105
+field sum 6603431032.9892
+field sqrsum 2.0740906689473e+17
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	35803
+bin	4800000	79
+bin	9600000	26
+bin	14400000	11
+bin	19200000	8
+bin	24000000	5
+bin	28800000	3
+bin	33600000	3
+bin	38400000	3
+bin	43200000	2
+bin	48000000	2
+bin	52800000	1
+bin	57600000	2
+bin	62400000	2
+bin	67200000	0
+bin	72000000	1
+bin	76800000	0
+bin	81600000	0
+bin	86400000	0
+bin	91200000	0
+bin	96000000	1
+bin	100800000	2
+bin	105600000	0
+bin	110400000	1
+bin	115200000	0
+bin	120000000	0
+bin	124800000	0
+bin	129600000	1
+bin	134400000	0
+bin	139200000	0
+bin	144000000	0
+bin	148800000	0
+bin	153600000	0
+bin	158400000	0
+bin	163200000	0
+bin	168000000	0
+bin	172800000	1
+bin	177600000	0
+bin	182400000	0
+bin	187200000	0
+bin	192000000	0
+bin	196800000	0
+bin	201600000	0
+bin	206400000	0
+bin	211200000	0
+bin	216000000	0
+bin	220800000	1
+bin	225600000	0
+scalar UAVNetwork.host[6].pingTestApp[0] "Pings sent" 1214
+scalar UAVNetwork.host[6].pingTestApp[0] "ping loss rate (%)" 27.265238879736
+scalar UAVNetwork.host[6].pingTestApp[0] "ping out-of-order rate (%)" 0
+scalar UAVNetwork.host[6].pingTestApp[0] pingRxSeq:count 883
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar UAVNetwork.host[6].pingTestApp[0] pingTxSeq:count 1214
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar UAVNetwork.host[6].pingTestApp[0] numOutOfOrderArrivals:last nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar UAVNetwork.host[6].pingTestApp[0] numLost:last 331
+attr interpolationmode none
+attr title "pings lost, last"
+statistic UAVNetwork.host[6].pingTestApp[0] rtt:histogram
+field count 773
+field mean 0.0018009551466093
+field stddev 0.00032895840006796
+field min 0.001652135257
+field max 0.004356746162
+field sum 1.392138328329
+field sqrsum 0.0025907196087651
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0.001	0
+bin	0.00105	0
+bin	0.0011	0
+bin	0.00115	0
+bin	0.0012	0
+bin	0.00125	0
+bin	0.0013	0
+bin	0.00135	0
+bin	0.0014	0
+bin	0.00145	0
+bin	0.0015	0
+bin	0.00155	0
+bin	0.0016	0
+bin	0.00165	258
+bin	0.0017	199
+bin	0.00175	271
+bin	0.0018	1
+bin	0.00185	0
+bin	0.0019	0
+bin	0.00195	0
+bin	0.002	0
+bin	0.00205	0
+bin	0.0021	0
+bin	0.00215	0
+bin	0.0022	0
+bin	0.00225	0
+bin	0.0023	0
+bin	0.00235	0
+bin	0.0024	2
+bin	0.00245	0
+bin	0.0025	0
+bin	0.00255	0
+bin	0.0026	0
+bin	0.00265	3
+bin	0.0027	3
+bin	0.00275	0
+bin	0.0028	5
+bin	0.00285	3
+bin	0.0029	3
+bin	0.00295	4
+bin	0.003	3
+bin	0.00305	3
+bin	0.0031	2
+bin	0.00315	3
+bin	0.0032	4
+bin	0.00325	2
+bin	0.0033	0
+bin	0.00335	0
+bin	0.0034	0
+bin	0.00345	0
+bin	0.0035	0
+bin	0.00355	0
+bin	0.0036	0
+bin	0.00365	0
+bin	0.0037	0
+bin	0.00375	0
+bin	0.0038	0
+bin	0.00385	0
+bin	0.0039	0
+bin	0.00395	0
+bin	0.004	0
+bin	0.00405	0
+bin	0.0041	2
+bin	0.00415	0
+bin	0.0042	1
+bin	0.00425	0
+bin	0.0043	0
+bin	0.00435	1
+bin	0.0044	0
+bin	0.00445	0
+bin	0.0045	0
+bin	0.00455	0
+bin	0.0046	0
+bin	0.00465	0
+bin	0.0047	0
+bin	0.00475	0
+bin	0.0048	0
+bin	0.00485	0
+scalar UAVNetwork.host[7].networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar UAVNetwork.host[7].networkLayer.arp completedARPResolution:count 159
+attr title "ARP completed resolutions, count"
+scalar UAVNetwork.host[7].networkLayer.arp initiatedARPResolution:count 18
+attr title "ARP initiated resolutions, count"
+scalar UAVNetwork.host[7].networkLayer.arp sentReply:count 7
+attr title "ARP replies sent, count"
+scalar UAVNetwork.host[7].networkLayer.arp sentReq:count 19
+attr title "ARP request sent, count"
+scalar UAVNetwork.host[7].lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar UAVNetwork.host[7].lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar UAVNetwork.host[7].lo0.lo rcvdPkFromHL:count 550
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UAVNetwork.host[7].lo0.lo rcvdPkFromHL:sum(packetBytes) 36960
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UAVNetwork.host[7].lo0.lo passedUpPk:count 550
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UAVNetwork.host[7].lo0.lo passedUpPk:sum(packetBytes) 36960
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar UAVNetwork.host[7].wlan[0].mac rcvdPkFromLL:count 36012
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar UAVNetwork.host[7].wlan[0].mac rcvdPkFromLL:sum(packetBytes) 2696896
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar UAVNetwork.host[7].wlan[0].mac sentDownPk:count 4391
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar UAVNetwork.host[7].wlan[0].mac sentDownPk:sum(packetBytes) 315206
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar UAVNetwork.host[7].wlan[0].mac rcvdPkFromHL:count 2441
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UAVNetwork.host[7].wlan[0].mac rcvdPkFromHL:sum(packetBytes) 283560
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UAVNetwork.host[7].wlan[0].mac passedUpPk:count 8124
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UAVNetwork.host[7].wlan[0].mac passedUpPk:sum(packetBytes) 907508
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+statistic UAVNetwork.host[7].wlan[0].radio radioChannel:histogram
+field count 1
+field mean 0
+field stddev -nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar UAVNetwork.host[7].wlan[0].radio transmissionState:count 17564
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar UAVNetwork.host[7].wlan[0].radio receptionState:count 80826
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar UAVNetwork.host[7].wlan[0].radio radioMode:count 8784
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic UAVNetwork.host[7].wlan[0].radio symbolErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic UAVNetwork.host[7].wlan[0].radio bitErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic UAVNetwork.host[7].wlan[0].radio packetErrorRate:histogram
+field count 36012
+field mean 0.00030538363621471
+field stddev 0.017470802166608
+field min 0
+field max 1
+field sum 10.997475507364
+field sqrsum 10.994957387683
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	36001
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+bin	0.52	0
+bin	0.54	0
+bin	0.56	0
+bin	0.58	0
+bin	0.6	0
+bin	0.62	0
+bin	0.64	0
+bin	0.66	0
+bin	0.68	0
+bin	0.7	0
+bin	0.72	0
+bin	0.74	0
+bin	0.76	0
+bin	0.78	0
+bin	0.8	0
+bin	0.82	0
+bin	0.84	0
+bin	0.86	0
+bin	0.88	0
+bin	0.9	0
+bin	0.92	0
+bin	0.94	0
+bin	0.96	0
+bin	0.98	4
+bin	1	7
+bin	1.02	0
+statistic UAVNetwork.host[7].wlan[0].radio minSNIR:histogram
+field count 36012
+field mean 1236526.4253183
+field stddev 84946205.146511
+field min 0.0020920828047239
+field max 10347471398.323
+field sum 44529789628.563
+field sqrsum 2.599053163736e+20
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	36001
+bin	180000000	2
+bin	360000000	2
+bin	540000000	0
+bin	720000000	0
+bin	900000000	0
+bin	1080000000	0
+bin	1260000000	0
+bin	1440000000	1
+bin	1620000000	1
+bin	1800000000	0
+bin	1980000000	0
+bin	2160000000	0
+bin	2340000000	0
+bin	2520000000	0
+bin	2700000000	0
+bin	2880000000	0
+bin	3060000000	0
+bin	3240000000	0
+bin	3420000000	2
+bin	3600000000	0
+bin	3780000000	0
+bin	3960000000	0
+bin	4140000000	0
+bin	4320000000	0
+bin	4500000000	0
+bin	4680000000	0
+bin	4860000000	0
+bin	5040000000	0
+bin	5220000000	0
+bin	5400000000	0
+bin	5580000000	0
+bin	5760000000	0
+bin	5940000000	0
+bin	6120000000	0
+bin	6300000000	0
+bin	6480000000	0
+bin	6660000000	0
+bin	6840000000	0
+bin	7020000000	1
+bin	7200000000	0
+bin	7380000000	0
+bin	7560000000	0
+bin	7740000000	0
+bin	7920000000	0
+bin	8100000000	0
+bin	8280000000	1
+bin	8460000000	0
+bin	8640000000	0
+bin	8820000000	0
+bin	9000000000	0
+bin	9180000000	0
+bin	9360000000	0
+bin	9540000000	0
+bin	9720000000	0
+bin	9900000000	0
+bin	10080000000	0
+bin	10260000000	1
+bin	10440000000	0
+scalar UAVNetwork.host[7].pingTestApp[0] "Pings sent" 1213
+scalar UAVNetwork.host[7].pingTestApp[0] "ping loss rate (%)" 27.205276174773
+scalar UAVNetwork.host[7].pingTestApp[0] "ping out-of-order rate (%)" 0.082440230832646
+scalar UAVNetwork.host[7].pingTestApp[0] pingRxSeq:count 883
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar UAVNetwork.host[7].pingTestApp[0] pingTxSeq:count 1213
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar UAVNetwork.host[7].pingTestApp[0] numOutOfOrderArrivals:last 1
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar UAVNetwork.host[7].pingTestApp[0] numLost:last 330
+attr interpolationmode none
+attr title "pings lost, last"
+statistic UAVNetwork.host[7].pingTestApp[0] rtt:histogram
+field count 773
+field mean 0.0030937303887154
+field stddev 0.036085243853173
+field min 0.001652111355
+field max 1.005031045259
+field sum 2.391453590477
+field sqrsum 1.01265431673
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0	772
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+bin	0.52	0
+bin	0.54	0
+bin	0.56	0
+bin	0.58	0
+bin	0.6	0
+bin	0.62	0
+bin	0.64	0
+bin	0.66	0
+bin	0.68	0
+bin	0.7	0
+bin	0.72	0
+bin	0.74	0
+bin	0.76	0
+bin	0.78	0
+bin	0.8	0
+bin	0.82	0
+bin	0.84	0
+bin	0.86	0
+bin	0.88	0
+bin	0.9	0
+bin	0.92	0
+bin	0.94	0
+bin	0.96	0
+bin	0.98	0
+bin	1	1
+bin	1.02	0
+scalar UAVNetwork.attackHost[0].networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar UAVNetwork.attackHost[0].networkLayer.arp completedARPResolution:count 162
+attr title "ARP completed resolutions, count"
+scalar UAVNetwork.attackHost[0].networkLayer.arp initiatedARPResolution:count 20
+attr title "ARP initiated resolutions, count"
+scalar UAVNetwork.attackHost[0].networkLayer.arp sentReply:count 7
+attr title "ARP replies sent, count"
+scalar UAVNetwork.attackHost[0].networkLayer.arp sentReq:count 21
+attr title "ARP request sent, count"
+scalar UAVNetwork.attackHost[0].lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar UAVNetwork.attackHost[0].lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar UAVNetwork.attackHost[0].lo0.lo rcvdPkFromHL:count 220
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UAVNetwork.attackHost[0].lo0.lo rcvdPkFromHL:sum(packetBytes) 18480
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UAVNetwork.attackHost[0].lo0.lo passedUpPk:count 220
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UAVNetwork.attackHost[0].lo0.lo passedUpPk:sum(packetBytes) 18480
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar UAVNetwork.attackHost[0].wlan[0].mac rcvdPkFromLL:count 38784
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar UAVNetwork.attackHost[0].wlan[0].mac rcvdPkFromLL:sum(packetBytes) 2856252
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar UAVNetwork.attackHost[0].wlan[0].mac sentDownPk:count 1833
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar UAVNetwork.attackHost[0].wlan[0].mac sentDownPk:sum(packetBytes) 169208
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar UAVNetwork.attackHost[0].wlan[0].mac rcvdPkFromHL:count 1353
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UAVNetwork.attackHost[0].wlan[0].mac rcvdPkFromHL:sum(packetBytes) 160792
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UAVNetwork.attackHost[0].wlan[0].mac passedUpPk:count 7573
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UAVNetwork.attackHost[0].wlan[0].mac passedUpPk:sum(packetBytes) 833188
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+statistic UAVNetwork.attackHost[0].wlan[0].radio radioChannel:histogram
+field count 1
+field mean 0
+field stddev -nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar UAVNetwork.attackHost[0].wlan[0].radio transmissionState:count 7332
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar UAVNetwork.attackHost[0].wlan[0].radio receptionState:count 81249
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar UAVNetwork.attackHost[0].wlan[0].radio radioMode:count 3668
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic UAVNetwork.attackHost[0].wlan[0].radio symbolErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic UAVNetwork.attackHost[0].wlan[0].radio bitErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic UAVNetwork.attackHost[0].wlan[0].radio packetErrorRate:histogram
+field count 38784
+field mean 0.0003858157516577
+field stddev 0.019615543232995
+field min 0
+field max 1
+field sum 14.963478112292
+field sqrsum 14.928290072866
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	38769
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+bin	0.52	0
+bin	0.54	0
+bin	0.56	0
+bin	0.58	0
+bin	0.6	0
+bin	0.62	0
+bin	0.64	0
+bin	0.66	0
+bin	0.68	0
+bin	0.7	0
+bin	0.72	0
+bin	0.74	0
+bin	0.76	0
+bin	0.78	0
+bin	0.8	0
+bin	0.82	0
+bin	0.84	0
+bin	0.86	0
+bin	0.88	0
+bin	0.9	0
+bin	0.92	0
+bin	0.94	0
+bin	0.96	1
+bin	0.98	2
+bin	1	12
+bin	1.02	0
+statistic UAVNetwork.attackHost[0].wlan[0].radio minSNIR:histogram
+field count 38784
+field mean 263050.33412905
+field stddev 5835453.134046
+field min 0.017771640443706
+field max 649015399.79014
+field sum 10202144158.861
+field sqrsum 1.3233422999544e+18
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	38714
+bin	11520000	31
+bin	23040000	15
+bin	34560000	3
+bin	46080000	2
+bin	57600000	3
+bin	69120000	3
+bin	80640000	0
+bin	92160000	1
+bin	103680000	0
+bin	115200000	1
+bin	126720000	0
+bin	138240000	0
+bin	149760000	2
+bin	161280000	0
+bin	172800000	1
+bin	184320000	0
+bin	195840000	1
+bin	207360000	1
+bin	218880000	0
+bin	230400000	0
+bin	241920000	0
+bin	253440000	1
+bin	264960000	0
+bin	276480000	1
+bin	288000000	0
+bin	299520000	1
+bin	311040000	0
+bin	322560000	0
+bin	334080000	0
+bin	345600000	0
+bin	357120000	0
+bin	368640000	0
+bin	380160000	0
+bin	391680000	0
+bin	403200000	0
+bin	414720000	1
+bin	426240000	0
+bin	437760000	0
+bin	449280000	0
+bin	460800000	0
+bin	472320000	0
+bin	483840000	1
+bin	495360000	0
+bin	506880000	0
+bin	518400000	0
+bin	529920000	0
+bin	541440000	0
+bin	552960000	0
+bin	564480000	0
+bin	576000000	0
+bin	587520000	0
+bin	599040000	0
+bin	610560000	0
+bin	622080000	0
+bin	633600000	0
+bin	645120000	1
+bin	656640000	0
+scalar UAVNetwork.attackHost[0].pingTestApp[0] "Pings sent" 1215
+scalar UAVNetwork.attackHost[0].pingTestApp[0] "ping loss rate (%)" 72.83950617284
+scalar UAVNetwork.attackHost[0].pingTestApp[0] "ping out-of-order rate (%)" 0
+scalar UAVNetwork.attackHost[0].pingTestApp[0] pingRxSeq:count 330
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar UAVNetwork.attackHost[0].pingTestApp[0] pingTxSeq:count 1215
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar UAVNetwork.attackHost[0].pingTestApp[0] numOutOfOrderArrivals:last nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar UAVNetwork.attackHost[0].pingTestApp[0] numLost:last 880
+attr interpolationmode none
+attr title "pings lost, last"
+statistic UAVNetwork.attackHost[0].pingTestApp[0] rtt:histogram
+field count 220
+field mean 0.0017474094072091
+field stddev 0.00020168587488498
+field min 0.00165263508
+field max 0.003247738244
+field sum 0.384430069586
+field sqrsum 0.00068066502508468
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0.00125	0
+bin	0.0013	0
+bin	0.00135	0
+bin	0.0014	0
+bin	0.00145	0
+bin	0.0015	0
+bin	0.00155	0
+bin	0.0016	0
+bin	0.00165	93
+bin	0.0017	52
+bin	0.00175	70
+bin	0.0018	0
+bin	0.00185	0
+bin	0.0019	0
+bin	0.00195	0
+bin	0.002	0
+bin	0.00205	0
+bin	0.0021	0
+bin	0.00215	0
+bin	0.0022	0
+bin	0.00225	0
+bin	0.0023	0
+bin	0.00235	0
+bin	0.0024	0
+bin	0.00245	0
+bin	0.0025	0
+bin	0.00255	0
+bin	0.0026	0
+bin	0.00265	0
+bin	0.0027	0
+bin	0.00275	1
+bin	0.0028	0
+bin	0.00285	1
+bin	0.0029	0
+bin	0.00295	0
+bin	0.003	1
+bin	0.00305	0
+bin	0.0031	0
+bin	0.00315	1
+bin	0.0032	1
+bin	0.00325	0
+bin	0.0033	0
+bin	0.00335	0
+bin	0.0034	0
+bin	0.00345	0
+bin	0.0035	0
+bin	0.00355	0
+bin	0.0036	0
+bin	0.00365	0
+scalar UAVNetwork.attackHost[1].networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar UAVNetwork.attackHost[1].networkLayer.arp completedARPResolution:count 160
+attr title "ARP completed resolutions, count"
+scalar UAVNetwork.attackHost[1].networkLayer.arp initiatedARPResolution:count 21
+attr title "ARP initiated resolutions, count"
+scalar UAVNetwork.attackHost[1].networkLayer.arp sentReply:count 5
+attr title "ARP replies sent, count"
+scalar UAVNetwork.attackHost[1].networkLayer.arp sentReq:count 21
+attr title "ARP request sent, count"
+scalar UAVNetwork.attackHost[1].lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar UAVNetwork.attackHost[1].lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar UAVNetwork.attackHost[1].lo0.lo rcvdPkFromHL:count 220
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UAVNetwork.attackHost[1].lo0.lo rcvdPkFromHL:sum(packetBytes) 18480
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UAVNetwork.attackHost[1].lo0.lo passedUpPk:count 220
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UAVNetwork.attackHost[1].lo0.lo passedUpPk:sum(packetBytes) 18480
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar UAVNetwork.attackHost[1].wlan[0].mac rcvdPkFromLL:count 38603
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar UAVNetwork.attackHost[1].wlan[0].mac rcvdPkFromLL:sum(packetBytes) 2842110
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar UAVNetwork.attackHost[1].wlan[0].mac sentDownPk:count 1850
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar UAVNetwork.attackHost[1].wlan[0].mac sentDownPk:sum(packetBytes) 171042
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar UAVNetwork.attackHost[1].wlan[0].mac rcvdPkFromHL:count 1350
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UAVNetwork.attackHost[1].wlan[0].mac rcvdPkFromHL:sum(packetBytes) 160544
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UAVNetwork.attackHost[1].wlan[0].mac passedUpPk:count 7557
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UAVNetwork.attackHost[1].wlan[0].mac passedUpPk:sum(packetBytes) 831164
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+statistic UAVNetwork.attackHost[1].wlan[0].radio radioChannel:histogram
+field count 1
+field mean 0
+field stddev -nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar UAVNetwork.attackHost[1].wlan[0].radio transmissionState:count 7400
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar UAVNetwork.attackHost[1].wlan[0].radio receptionState:count 80927
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar UAVNetwork.attackHost[1].wlan[0].radio radioMode:count 3702
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic UAVNetwork.attackHost[1].wlan[0].radio symbolErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic UAVNetwork.attackHost[1].wlan[0].radio bitErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic UAVNetwork.attackHost[1].wlan[0].radio packetErrorRate:histogram
+field count 38603
+field mean 0.00033234006653103
+field stddev 0.018126537932609
+field min 0
+field max 1
+field sum 12.829323588297
+field sqrsum 12.68777600951
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	38590
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+bin	0.52	0
+bin	0.54	0
+bin	0.56	0
+bin	0.58	0
+bin	0.6	0
+bin	0.62	0
+bin	0.64	0
+bin	0.66	0
+bin	0.68	0
+bin	0.7	0
+bin	0.72	0
+bin	0.74	0
+bin	0.76	0
+bin	0.78	0
+bin	0.8	0
+bin	0.82	1
+bin	0.84	0
+bin	0.86	0
+bin	0.88	0
+bin	0.9	0
+bin	0.92	0
+bin	0.94	0
+bin	0.96	0
+bin	0.98	1
+bin	1	11
+bin	1.02	0
+statistic UAVNetwork.attackHost[1].wlan[0].radio minSNIR:histogram
+field count 38603
+field mean 258670.32148057
+field stddev 4974251.813176
+field min 0.093401189570634
+field max 525777233.75474
+field sum 9985450420.1145
+field sqrsum 9.5771921652663e+17
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	38464
+bin	6480000	64
+bin	12960000	23
+bin	19440000	15
+bin	25920000	4
+bin	32400000	0
+bin	38880000	0
+bin	45360000	6
+bin	51840000	6
+bin	58320000	2
+bin	64800000	1
+bin	71280000	1
+bin	77760000	1
+bin	84240000	0
+bin	90720000	0
+bin	97200000	0
+bin	103680000	0
+bin	110160000	1
+bin	116640000	0
+bin	123120000	2
+bin	129600000	2
+bin	136080000	1
+bin	142560000	1
+bin	149040000	1
+bin	155520000	0
+bin	162000000	2
+bin	168480000	0
+bin	174960000	0
+bin	181440000	0
+bin	187920000	1
+bin	194400000	0
+bin	200880000	0
+bin	207360000	0
+bin	213840000	1
+bin	220320000	0
+bin	226800000	0
+bin	233280000	0
+bin	239760000	0
+bin	246240000	0
+bin	252720000	0
+bin	259200000	0
+bin	265680000	1
+bin	272160000	0
+bin	278640000	0
+bin	285120000	0
+bin	291600000	0
+bin	298080000	0
+bin	304560000	1
+bin	311040000	0
+bin	317520000	0
+bin	324000000	0
+bin	330480000	0
+bin	336960000	0
+bin	343440000	0
+bin	349920000	0
+bin	356400000	0
+bin	362880000	0
+bin	369360000	0
+bin	375840000	0
+bin	382320000	1
+bin	388800000	0
+bin	395280000	0
+bin	401760000	0
+bin	408240000	0
+bin	414720000	0
+bin	421200000	0
+bin	427680000	0
+bin	434160000	0
+bin	440640000	0
+bin	447120000	0
+bin	453600000	0
+bin	460080000	0
+bin	466560000	0
+bin	473040000	0
+bin	479520000	0
+bin	486000000	0
+bin	492480000	0
+bin	498960000	0
+bin	505440000	0
+bin	511920000	0
+bin	518400000	0
+bin	524880000	1
+bin	531360000	0
+scalar UAVNetwork.attackHost[1].pingTestApp[0] "Pings sent" 1214
+scalar UAVNetwork.attackHost[1].pingTestApp[0] "ping loss rate (%)" 72.817133443163
+scalar UAVNetwork.attackHost[1].pingTestApp[0] "ping out-of-order rate (%)" 0
+scalar UAVNetwork.attackHost[1].pingTestApp[0] pingRxSeq:count 330
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar UAVNetwork.attackHost[1].pingTestApp[0] pingTxSeq:count 1214
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar UAVNetwork.attackHost[1].pingTestApp[0] numOutOfOrderArrivals:last nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar UAVNetwork.attackHost[1].pingTestApp[0] numLost:last 880
+attr interpolationmode none
+attr title "pings lost, last"
+statistic UAVNetwork.attackHost[1].pingTestApp[0] rtt:histogram
+field count 220
+field mean 0.0017988700014136
+field stddev 0.0003134034033667
+field min 0.00165263508
+field max 0.003856933397
+field sum 0.395751400311
+field sqrsum 0.00073341587285686
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0.0012	0
+bin	0.00125	0
+bin	0.0013	0
+bin	0.00135	0
+bin	0.0014	0
+bin	0.00145	0
+bin	0.0015	0
+bin	0.00155	0
+bin	0.0016	0
+bin	0.00165	74
+bin	0.0017	57
+bin	0.00175	76
+bin	0.0018	0
+bin	0.00185	0
+bin	0.0019	0
+bin	0.00195	0
+bin	0.002	0
+bin	0.00205	0
+bin	0.0021	0
+bin	0.00215	0
+bin	0.0022	0
+bin	0.00225	0
+bin	0.0023	0
+bin	0.00235	0
+bin	0.0024	0
+bin	0.00245	1
+bin	0.0025	0
+bin	0.00255	0
+bin	0.0026	0
+bin	0.00265	1
+bin	0.0027	1
+bin	0.00275	3
+bin	0.0028	0
+bin	0.00285	0
+bin	0.0029	1
+bin	0.00295	0
+bin	0.003	1
+bin	0.00305	0
+bin	0.0031	1
+bin	0.00315	1
+bin	0.0032	1
+bin	0.00325	1
+bin	0.0033	0
+bin	0.00335	0
+bin	0.0034	0
+bin	0.00345	0
+bin	0.0035	0
+bin	0.00355	0
+bin	0.0036	0
+bin	0.00365	0
+bin	0.0037	0
+bin	0.00375	0
+bin	0.0038	0
+bin	0.00385	1
+bin	0.0039	0
+scalar UAVNetwork.attackHost[2].networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar UAVNetwork.attackHost[2].networkLayer.arp completedARPResolution:count 155
+attr title "ARP completed resolutions, count"
+scalar UAVNetwork.attackHost[2].networkLayer.arp initiatedARPResolution:count 31
+attr title "ARP initiated resolutions, count"
+scalar UAVNetwork.attackHost[2].networkLayer.arp sentReply:count 0
+attr title "ARP replies sent, count"
+scalar UAVNetwork.attackHost[2].networkLayer.arp sentReq:count 31
+attr title "ARP request sent, count"
+scalar UAVNetwork.attackHost[2].lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar UAVNetwork.attackHost[2].lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar UAVNetwork.attackHost[2].lo0.lo rcvdPkFromHL:count 220
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UAVNetwork.attackHost[2].lo0.lo rcvdPkFromHL:sum(packetBytes) 18480
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UAVNetwork.attackHost[2].lo0.lo passedUpPk:count 220
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UAVNetwork.attackHost[2].lo0.lo passedUpPk:sum(packetBytes) 18480
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar UAVNetwork.attackHost[2].wlan[0].mac rcvdPkFromLL:count 38449
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar UAVNetwork.attackHost[2].wlan[0].mac rcvdPkFromLL:sum(packetBytes) 2832220
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar UAVNetwork.attackHost[2].wlan[0].mac sentDownPk:count 1869
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar UAVNetwork.attackHost[2].wlan[0].mac sentDownPk:sum(packetBytes) 172300
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar UAVNetwork.attackHost[2].wlan[0].mac rcvdPkFromHL:count 1355
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UAVNetwork.attackHost[2].wlan[0].mac rcvdPkFromHL:sum(packetBytes) 160864
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UAVNetwork.attackHost[2].wlan[0].mac passedUpPk:count 7534
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UAVNetwork.attackHost[2].wlan[0].mac passedUpPk:sum(packetBytes) 829076
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+statistic UAVNetwork.attackHost[2].wlan[0].radio radioChannel:histogram
+field count 1
+field mean 0
+field stddev -nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar UAVNetwork.attackHost[2].wlan[0].radio transmissionState:count 7476
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar UAVNetwork.attackHost[2].wlan[0].radio receptionState:count 80653
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar UAVNetwork.attackHost[2].wlan[0].radio radioMode:count 3740
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic UAVNetwork.attackHost[2].wlan[0].radio symbolErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic UAVNetwork.attackHost[2].wlan[0].radio bitErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic UAVNetwork.attackHost[2].wlan[0].radio packetErrorRate:histogram
+field count 38449
+field mean 0.00027634838523436
+field stddev 0.016295128427909
+field min 0
+field max 1
+field sum 10.625319063876
+field sqrsum 10.21208027038
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	38436
+bin	0.02	0
+bin	0.04	0
+bin	0.06	1
+bin	0.08	0
+bin	0.1	1
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	1
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+bin	0.52	0
+bin	0.54	0
+bin	0.56	0
+bin	0.58	0
+bin	0.6	0
+bin	0.62	0
+bin	0.64	0
+bin	0.66	0
+bin	0.68	0
+bin	0.7	0
+bin	0.72	0
+bin	0.74	0
+bin	0.76	0
+bin	0.78	0
+bin	0.8	0
+bin	0.82	0
+bin	0.84	0
+bin	0.86	0
+bin	0.88	0
+bin	0.9	0
+bin	0.92	0
+bin	0.94	0
+bin	0.96	0
+bin	0.98	2
+bin	1	8
+bin	1.02	0
+statistic UAVNetwork.attackHost[2].wlan[0].radio minSNIR:histogram
+field count 38449
+field mean 248539.51622194
+field stddev 4542028.4995548
+field min 0.056628904949337
+field max 487993181.5463
+field sum 9556095859.2173
+field sqrsum 7.9555818754607e+17
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	38298
+bin	6400000	74
+bin	12800000	24
+bin	19200000	9
+bin	25600000	8
+bin	32000000	7
+bin	38400000	4
+bin	44800000	0
+bin	51200000	4
+bin	57600000	4
+bin	64000000	1
+bin	70400000	3
+bin	76800000	1
+bin	83200000	1
+bin	89600000	0
+bin	96000000	0
+bin	102400000	0
+bin	108800000	0
+bin	115200000	0
+bin	121600000	0
+bin	128000000	0
+bin	134400000	1
+bin	140800000	0
+bin	147200000	0
+bin	153600000	0
+bin	160000000	1
+bin	166400000	1
+bin	172800000	1
+bin	179200000	0
+bin	185600000	2
+bin	192000000	1
+bin	198400000	0
+bin	204800000	0
+bin	211200000	0
+bin	217600000	1
+bin	224000000	0
+bin	230400000	0
+bin	236800000	0
+bin	243200000	0
+bin	249600000	0
+bin	256000000	0
+bin	262400000	0
+bin	268800000	0
+bin	275200000	0
+bin	281600000	1
+bin	288000000	0
+bin	294400000	0
+bin	300800000	0
+bin	307200000	0
+bin	313600000	0
+bin	320000000	0
+bin	326400000	1
+bin	332800000	0
+bin	339200000	0
+bin	345600000	0
+bin	352000000	0
+bin	358400000	0
+bin	364800000	0
+bin	371200000	0
+bin	377600000	0
+bin	384000000	0
+bin	390400000	0
+bin	396800000	0
+bin	403200000	0
+bin	409600000	0
+bin	416000000	0
+bin	422400000	0
+bin	428800000	0
+bin	435200000	0
+bin	441600000	0
+bin	448000000	0
+bin	454400000	0
+bin	460800000	0
+bin	467200000	0
+bin	473600000	0
+bin	480000000	0
+bin	486400000	1
+bin	492800000	0
+scalar UAVNetwork.attackHost[2].pingTestApp[0] "Pings sent" 1214
+scalar UAVNetwork.attackHost[2].pingTestApp[0] "ping loss rate (%)" 72.817133443163
+scalar UAVNetwork.attackHost[2].pingTestApp[0] "ping out-of-order rate (%)" 0
+scalar UAVNetwork.attackHost[2].pingTestApp[0] pingRxSeq:count 330
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar UAVNetwork.attackHost[2].pingTestApp[0] pingTxSeq:count 1214
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar UAVNetwork.attackHost[2].pingTestApp[0] numOutOfOrderArrivals:last nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar UAVNetwork.attackHost[2].pingTestApp[0] numLost:last 880
+attr interpolationmode none
+attr title "pings lost, last"
+statistic UAVNetwork.attackHost[2].pingTestApp[0] rtt:histogram
+field count 220
+field mean 0.0017695703078273
+field stddev 0.00024256014247581
+field min 0.001652869122
+field max 0.003247738244
+field sum 0.389305467722
+field sqrsum 0.00070178835393088
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0.00125	0
+bin	0.0013	0
+bin	0.00135	0
+bin	0.0014	0
+bin	0.00145	0
+bin	0.0015	0
+bin	0.00155	0
+bin	0.0016	0
+bin	0.00165	91
+bin	0.0017	46
+bin	0.00175	72
+bin	0.0018	0
+bin	0.00185	0
+bin	0.0019	0
+bin	0.00195	0
+bin	0.002	1
+bin	0.00205	0
+bin	0.0021	0
+bin	0.00215	1
+bin	0.0022	0
+bin	0.00225	0
+bin	0.0023	0
+bin	0.00235	1
+bin	0.0024	0
+bin	0.00245	0
+bin	0.0025	0
+bin	0.00255	0
+bin	0.0026	0
+bin	0.00265	0
+bin	0.0027	1
+bin	0.00275	1
+bin	0.0028	0
+bin	0.00285	1
+bin	0.0029	1
+bin	0.00295	1
+bin	0.003	1
+bin	0.00305	1
+bin	0.0031	0
+bin	0.00315	0
+bin	0.0032	1
+bin	0.00325	0
+bin	0.0033	0
+bin	0.00335	0
+bin	0.0034	0
+bin	0.00345	0
+

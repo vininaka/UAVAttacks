@@ -1,0 +1,728 @@
+version 2
+run WithOLSR-0-20191218-15:32:06-3974
+attr configname WithOLSR
+attr datetime 20191218-15:32:06
+attr experiment WithOLSR
+attr inifile test.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network uavsim.TestNetwork
+attr processid 3974
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.host[*].routingProtocol "\"OLSR\""
+param **.constraintAreaMinZ 0m
+param **.constraintAreaMaxZ 0m
+param **.host[*].**.channelNumber 0
+param **.attackHost[*].**.channelNumber 0
+param *.radioMedium.pathLossType "\"NakagamiFading\""
+param *.radioMedium.pathLoss.alpha 2.7
+param *.attackHost[*].wlan[0].radio.displayCommunicationRange true
+param **.wlan[0].radio.displayInterferenceRange false
+param **.attackHost[*].mobilityType "\"StationaryMobility\""
+param **.attackHost[*].mobility.initFromDisplayString false
+param **.attackHost[0].mobility.initialX 200m
+param **.attackHost[0].mobility.initialY 200m
+param **.attackHost[1].mobility.initialX 300m
+param **.attackHost[1].mobility.initialY 250m
+param **.host[*].mobilityType "\"MassMobility\""
+param **.host[*].mobility.initFromDisplayString false
+param **.host[0].mobility.constraintAreaMinX 150m
+param **.host[0].mobility.constraintAreaMinY 200m
+param **.host[0].mobility.constraintAreaMaxX 250m
+param **.host[0].mobility.constraintAreaMaxY 300m
+param **.host[1].mobility.constraintAreaMinX 200m
+param **.host[1].mobility.constraintAreaMinY 250m
+param **.host[1].mobility.constraintAreaMaxX 300m
+param **.host[1].mobility.constraintAreaMaxY 350m
+param **.host[2].mobility.constraintAreaMinX 350m
+param **.host[2].mobility.constraintAreaMinY 150m
+param **.host[2].mobility.constraintAreaMaxX 450m
+param **.host[2].mobility.constraintAreaMaxY 250m
+param **.host[3].mobility.constraintAreaMinX 300m
+param **.host[3].mobility.constraintAreaMinY 450m
+param **.host[3].mobility.constraintAreaMaxX 500m
+param **.host[3].mobility.constraintAreaMaxY 550m
+param **.host[4].mobility.constraintAreaMinX 300m
+param **.host[4].mobility.constraintAreaMinY 350m
+param **.host[4].mobility.constraintAreaMaxX 500m
+param **.host[4].mobility.constraintAreaMaxY 450m
+param **.host[5].mobility.constraintAreaMinX 450m
+param **.host[5].mobility.constraintAreaMinY 450m
+param **.host[5].mobility.constraintAreaMaxX 550m
+param **.host[5].mobility.constraintAreaMaxY 550m
+param **.host[6].mobility.constraintAreaMinX 150m
+param **.host[6].mobility.constraintAreaMinY 450m
+param **.host[6].mobility.constraintAreaMaxX 250m
+param **.host[6].mobility.constraintAreaMaxY 550m
+param **.host[7].mobility.constraintAreaMinX 550m
+param **.host[7].mobility.constraintAreaMinY 250m
+param **.host[7].mobility.constraintAreaMaxX 650m
+param **.host[7].mobility.constraintAreaMaxY 350m
+param **.host[8].mobility.constraintAreaMinX 450m
+param **.host[8].mobility.constraintAreaMinY 0m
+param **.host[8].mobility.constraintAreaMaxX 550m
+param **.host[8].mobility.constraintAreaMaxY 100m
+param **.host[9].mobility.constraintAreaMinX 550m
+param **.host[9].mobility.constraintAreaMinY 150m
+param **.host[9].mobility.constraintAreaMaxX 650m
+param **.host[9].mobility.constraintAreaMaxY 250m
+param **.host[*].mobility.changeInterval "truncnormal(2s, 0.5s)"
+param **.host[*].mobility.changeAngleBy "normal(0deg, 30deg)"
+param **.host[*].mobility.speed "truncnormal(20mps, 8mps)"
+param **.host[*].mobility.updateInterval 100ms
+param **.pingTestApp[*].continuous true
+param *.host[*].pingTestApp[*].destAddr "\"*\""
+param *.host[*].pingTestApp[*].startTime uniform(0.001s,3s)
+param *.host[*].pingTestApp[*].sendInterval 0.5s
+param *.host[*].pingTestApp[*].printPing true
+param *.host[*].numPingTestApps 1
+param *.attackHost[*].numPingTestApps 1
+param *.attackHost[*].pingTestApp[*].destAddr "\"*\""
+param *.attackHost[*].pingTestApp[*].startTime uniform(0.001s,3s)
+param *.attackHost[*].pingTestApp[*].sendInterval 0.0001s
+param *.attackHost[*].pingTestApp[*].packetSize 500B
+param **.wlan[*].bitrate 11Mbps
+param *.host[*].wlan[*].radio.transmitter.power 100mW
+param *.attackHost[*].wlan[*].radio.transmitter.power 100mW
+
+vector 0 TestNetwork.host[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 1 TestNetwork.host[0].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 2 TestNetwork.host[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 3 TestNetwork.host[1].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 4 TestNetwork.attackHost[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 5 TestNetwork.attackHost[0].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 6 TestNetwork.attackHost[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 7 TestNetwork.attackHost[1].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 8 TestNetwork.host[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 9 TestNetwork.host[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 10 TestNetwork.attackHost[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 11 TestNetwork.attackHost[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 12 TestNetwork.host[0].wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 13 TestNetwork.host[0].wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 14 TestNetwork.host[0].wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 15 TestNetwork.host[0].wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 16 TestNetwork.host[0].wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 17 TestNetwork.host[1].wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 18 TestNetwork.host[1].wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 19 TestNetwork.host[1].wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 20 TestNetwork.host[1].wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 21 TestNetwork.host[1].wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 22 TestNetwork.attackHost[0].wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 23 TestNetwork.attackHost[0].wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 24 TestNetwork.attackHost[0].wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 25 TestNetwork.attackHost[0].wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 26 TestNetwork.attackHost[0].wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 27 TestNetwork.attackHost[1].wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 28 TestNetwork.attackHost[1].wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 29 TestNetwork.attackHost[1].wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 30 TestNetwork.attackHost[1].wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 31 TestNetwork.attackHost[1].wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 32 TestNetwork.host[0].pingTestApp[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 33 TestNetwork.host[0].lo0.lo rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 34 TestNetwork.host[0].lo0.lo passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 35 TestNetwork.host[0].pingTestApp[0] pingRxSeq:vector ETV
+attr interpolationmode none
+attr title "ping rx seq, vector"
+vector 36 TestNetwork.host[1].pingTestApp[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 37 TestNetwork.attackHost[0].pingTestApp[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 38 TestNetwork.attackHost[0].networkLayer.arp sentReq:vector ETV
+attr title "ARP request sent, vector"
+vector 39 TestNetwork.attackHost[0].wlan[0].mac rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 40 TestNetwork.attackHost[0].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 41 TestNetwork.attackHost[0].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 42 TestNetwork.attackHost[0].lo0.lo rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 43 TestNetwork.attackHost[0].lo0.lo passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 44 TestNetwork.attackHost[0].pingTestApp[0] pingRxSeq:vector ETV
+attr interpolationmode none
+attr title "ping rx seq, vector"
+vector 45 TestNetwork.attackHost[0].pingTestApp[0] numLost:vector ETV
+attr interpolationmode none
+attr title "pings lost, vector"
+vector 46 TestNetwork.host[0].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 47 TestNetwork.host[0].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 48 TestNetwork.host[0].networkLayer.arp sentReply:vector ETV
+attr title "ARP replies sent, vector"
+vector 49 TestNetwork.host[0].wlan[0].mac rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 50 TestNetwork.host[1].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 51 TestNetwork.host[1].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 52 TestNetwork.attackHost[1].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 53 TestNetwork.attackHost[1].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 54 TestNetwork.host[0].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 55 TestNetwork.host[0].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 56 TestNetwork.attackHost[0].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 57 TestNetwork.attackHost[0].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+0	0	0	0
+0	0	0	2
+0	130	2.146162161214	3
+0	142	2.146401161214	2
+1	0	0	0
+2	0	0	0
+2	0	0	2
+3	0	0	0
+4	0	0	0
+4	0	0	2
+4	79	2.14585290555	3
+4	102	2.14609190555	2
+4	157	2.146411416857	3
+4	179	2.146614416857	2
+4	224	2.147164416857	3
+5	0	0	0
+6	0	0	0
+6	0	0	2
+7	0	0	0
+8	0	0	1
+8	81	2.145853161214	3
+8	103	2.146092161214	1
+8	130	2.146162161214	0
+8	142	2.146401161214	1
+8	159	2.146411672483	3
+8	181	2.146614672483	1
+9	0	0	1
+9	82	2.145853190943	3
+9	111	2.146092190943	1
+9	132	2.14616221373	3
+9	143	2.14640121373	1
+9	160	2.146411702274	3
+9	183	2.146614702274	1
+10	0	0	1
+10	79	2.14585290555	0
+10	102	2.14609190555	1
+10	133	2.146162416857	3
+10	145	2.146401416857	1
+10	157	2.146411416857	0
+10	179	2.146614416857	1
+10	224	2.147164416857	0
+11	0	0	1
+11	83	2.145853278486	3
+11	116	2.146092278486	1
+11	134	2.146162450368	3
+11	154	2.146401450368	1
+11	161	2.146411789793	3
+11	185	2.146614789793	1
+12	0	0	0
+12	0	0	0
+12	81	2.145853161214	0
+12	81	2.145853161214	0
+12	103	2.146092161214	0
+12	103	2.146092161214	0
+12	110	2.146092161214	0
+12	110	2.146092161214	2
+12	127	2.146162161214	2
+12	127	2.146162161214	0
+12	130	2.146162161214	0
+12	130	2.146162161214	0
+12	181	2.146614672483	0
+12	181	2.146614672483	0
+13	0	0	0
+13	0	0	0
+13	81	2.145853161214	0
+13	81	2.145853161214	0
+13	103	2.146092161214	0
+13	103	2.146092161214	0
+13	130	2.146162161214	0
+13	130	2.146162161214	0
+13	181	2.146614672483	0
+13	181	2.146614672483	0
+14	0	0	0
+14	0	0	0
+14	81	2.145853161214	0
+14	81	2.145853161214	0
+14	103	2.146092161214	0
+14	103	2.146092161214	0
+14	130	2.146162161214	0
+14	130	2.146162161214	0
+14	181	2.146614672483	0
+14	181	2.146614672483	0
+15	0	0	0
+15	0	0	0
+15	81	2.145853161214	0
+15	81	2.145853161214	0
+15	103	2.146092161214	0
+15	103	2.146092161214	0
+15	130	2.146162161214	0
+15	130	2.146162161214	0
+15	181	2.146614672483	0
+15	181	2.146614672483	0
+16	0	0	0
+16	0	0	0
+16	81	2.145853161214	0
+16	81	2.145853161214	0
+16	103	2.146092161214	0
+16	103	2.146092161214	0
+16	130	2.146162161214	0
+16	130	2.146162161214	0
+16	181	2.146614672483	0
+16	181	2.146614672483	0
+17	0	0	0
+17	0	0	0
+17	82	2.145853190943	0
+17	82	2.145853190943	0
+17	111	2.146092190943	0
+17	111	2.146092190943	0
+17	132	2.14616221373	0
+17	132	2.14616221373	0
+17	143	2.14640121373	0
+17	143	2.14640121373	0
+17	144	2.14640121373	0
+17	144	2.14640121373	0
+17	183	2.146614702274	0
+17	183	2.146614702274	0
+18	0	0	0
+18	0	0	0
+18	82	2.145853190943	0
+18	82	2.145853190943	0
+18	111	2.146092190943	0
+18	111	2.146092190943	0
+18	132	2.14616221373	0
+18	132	2.14616221373	0
+18	143	2.14640121373	0
+18	143	2.14640121373	0
+18	144	2.14640121373	0
+18	144	2.14640121373	0
+18	183	2.146614702274	0
+18	183	2.146614702274	0
+19	0	0	0
+19	0	0	0
+19	82	2.145853190943	0
+19	82	2.145853190943	0
+19	111	2.146092190943	0
+19	111	2.146092190943	0
+19	132	2.14616221373	0
+19	132	2.14616221373	0
+19	143	2.14640121373	0
+19	143	2.14640121373	0
+19	144	2.14640121373	0
+19	144	2.14640121373	0
+19	183	2.146614702274	0
+19	183	2.146614702274	0
+20	0	0	0
+20	0	0	0
+20	82	2.145853190943	0
+20	82	2.145853190943	0
+20	111	2.146092190943	0
+20	111	2.146092190943	0
+20	132	2.14616221373	0
+20	132	2.14616221373	0
+20	143	2.14640121373	0
+20	143	2.14640121373	0
+20	144	2.14640121373	0
+20	144	2.14640121373	0
+20	183	2.146614702274	0
+20	183	2.146614702274	0
+21	0	0	0
+21	0	0	0
+21	82	2.145853190943	0
+21	82	2.145853190943	0
+21	111	2.146092190943	0
+21	111	2.146092190943	0
+21	132	2.14616221373	0
+21	132	2.14616221373	0
+21	143	2.14640121373	0
+21	143	2.14640121373	0
+21	144	2.14640121373	0
+21	144	2.14640121373	0
+21	183	2.146614702274	0
+21	183	2.146614702274	0
+22	0	0	0
+22	0	0	0
+22	75	2.14585290555	0
+22	75	2.14585290555	2
+22	76	2.14585290555	2
+22	76	2.14585290555	0
+22	79	2.14585290555	0
+22	79	2.14585290555	0
+22	101	2.14609190555	0
+22	101	2.14609190555	1
+22	102	2.14609190555	1
+22	102	2.14609190555	2
+22	133	2.146162416857	2
+22	133	2.146162416857	1
+22	145	2.146401416857	1
+22	145	2.146401416857	2
+22	157	2.146411416857	2
+22	157	2.146411416857	1
+22	179	2.146614416857	1
+22	179	2.146614416857	2
+22	221	2.147164416857	2
+22	221	2.147164416857	0
+22	224	2.147164416857	0
+22	224	2.147164416857	0
+23	0	0	0
+23	0	0	0
+23	79	2.14585290555	0
+23	79	2.14585290555	0
+23	102	2.14609190555	0
+23	102	2.14609190555	0
+23	133	2.146162416857	0
+23	133	2.146162416857	0
+23	145	2.146401416857	0
+23	145	2.146401416857	0
+23	157	2.146411416857	0
+23	157	2.146411416857	0
+23	179	2.146614416857	0
+23	179	2.146614416857	0
+23	224	2.147164416857	0
+23	224	2.147164416857	0
+24	0	0	0
+24	0	0	0
+24	79	2.14585290555	0
+24	79	2.14585290555	0
+24	102	2.14609190555	0
+24	102	2.14609190555	0
+24	133	2.146162416857	0
+24	133	2.146162416857	0
+24	145	2.146401416857	0
+24	145	2.146401416857	0
+24	157	2.146411416857	0
+24	157	2.146411416857	0
+24	179	2.146614416857	0
+24	179	2.146614416857	0
+24	224	2.147164416857	0
+24	224	2.147164416857	0
+25	0	0	0
+25	0	0	0
+25	79	2.14585290555	0
+25	79	2.14585290555	0
+25	102	2.14609190555	0
+25	102	2.14609190555	0
+25	133	2.146162416857	0
+25	133	2.146162416857	0
+25	145	2.146401416857	0
+25	145	2.146401416857	0
+25	157	2.146411416857	0
+25	157	2.146411416857	0
+25	179	2.146614416857	0
+25	179	2.146614416857	0
+25	224	2.147164416857	0
+25	224	2.147164416857	0
+26	0	0	0
+26	0	0	0
+26	79	2.14585290555	0
+26	79	2.14585290555	0
+26	102	2.14609190555	0
+26	102	2.14609190555	0
+26	133	2.146162416857	0
+26	133	2.146162416857	0
+26	145	2.146401416857	0
+26	145	2.146401416857	0
+26	157	2.146411416857	0
+26	157	2.146411416857	0
+26	179	2.146614416857	0
+26	179	2.146614416857	0
+26	224	2.147164416857	0
+26	224	2.147164416857	0
+27	0	0	0
+27	0	0	0
+27	83	2.145853278486	0
+27	83	2.145853278486	0
+27	116	2.146092278486	0
+27	116	2.146092278486	0
+27	134	2.146162450368	0
+27	134	2.146162450368	0
+27	154	2.146401450368	0
+27	154	2.146401450368	0
+27	155	2.146401450368	0
+27	155	2.146401450368	0
+27	185	2.146614789793	0
+27	185	2.146614789793	0
+28	0	0	0
+28	0	0	0
+28	83	2.145853278486	0
+28	83	2.145853278486	0
+28	116	2.146092278486	0
+28	116	2.146092278486	0
+28	134	2.146162450368	0
+28	134	2.146162450368	0
+28	154	2.146401450368	0
+28	154	2.146401450368	0
+28	155	2.146401450368	0
+28	155	2.146401450368	0
+28	185	2.146614789793	0
+28	185	2.146614789793	0
+29	0	0	0
+29	0	0	0
+29	83	2.145853278486	0
+29	83	2.145853278486	0
+29	116	2.146092278486	0
+29	116	2.146092278486	0
+29	134	2.146162450368	0
+29	134	2.146162450368	0
+29	154	2.146401450368	0
+29	154	2.146401450368	0
+29	155	2.146401450368	0
+29	155	2.146401450368	0
+29	185	2.146614789793	0
+29	185	2.146614789793	0
+30	0	0	0
+30	0	0	0
+30	83	2.145853278486	0
+30	83	2.145853278486	0
+30	116	2.146092278486	0
+30	116	2.146092278486	0
+30	134	2.146162450368	0
+30	134	2.146162450368	0
+30	154	2.146401450368	0
+30	154	2.146401450368	0
+30	155	2.146401450368	0
+30	155	2.146401450368	0
+30	185	2.146614789793	0
+30	185	2.146614789793	0
+31	0	0	0
+31	0	0	0
+31	83	2.145853278486	0
+31	83	2.145853278486	0
+31	116	2.146092278486	0
+31	116	2.146092278486	0
+31	134	2.146162450368	0
+31	134	2.146162450368	0
+31	154	2.146401450368	0
+31	154	2.146401450368	0
+31	155	2.146401450368	0
+31	155	2.146401450368	0
+31	185	2.146614789793	0
+31	185	2.146614789793	0
+32	43	1.64689169341	0
+32	206	2.14689169341	1
+33	46	1.64689169341	84
+33	50	1.64689169341	84
+34	46	1.64689169341	84
+34	50	1.64689169341	84
+35	53	1.64689169341	0
+36	57	1.77894100455	0
+37	70	2.14585290555	0
+37	84	2.14595290555	1
+37	90	2.14605290555	2
+37	121	2.14615290555	3
+37	135	2.14625290555	4
+37	138	2.14635290555	5
+37	162	2.14645290555	6
+37	173	2.14655290555	7
+37	187	2.14665290555	8
+37	192	2.14675290555	9
+37	195	2.14685290555	10
+37	210	2.14695290555	11
+37	213	2.14705290555	12
+37	218	2.14715290555	13
+38	72	2.14585290555	1
+38	86	2.14595290555	1
+38	123	2.14615290555	1
+39	75	2.14585290555	64
+39	89	2.14595290555	64
+39	126	2.14615290555	64
+39	152	2.146401416857	564
+39	153	2.146401416857	564
+39	191	2.14665290555	564
+39	217	2.14705290555	564
+40	78	2.14585290555	64
+40	156	2.146411416857	14
+40	223	2.147164416857	64
+41	79	2.14585290555	1
+41	80	2.14585290555	2
+41	101	2.14609190555	1
+41	102	2.14609190555	0
+41	157	2.146411416857	1
+41	158	2.146411416857	2
+41	178	2.146614416857	1
+41	179	2.146614416857	0
+41	224	2.147164416857	1
+41	225	2.147164416857	2
+42	93	2.14605290555	528
+42	97	2.14605290555	528
+42	165	2.14645290555	528
+42	169	2.14645290555	528
+42	198	2.14685290555	528
+42	202	2.14685290555	528
+43	93	2.14605290555	528
+43	97	2.14605290555	528
+43	165	2.14645290555	528
+43	169	2.14645290555	528
+43	198	2.14685290555	528
+43	202	2.14685290555	528
+44	100	2.14605290555	2
+44	172	2.14645290555	6
+44	205	2.14685290555	10
+45	100	2.14605290555	2
+45	172	2.14645290555	5
+45	205	2.14685290555	8
+46	104	2.146092161214	64
+46	182	2.146614672483	14
+47	104	2.146092161214	64
+48	107	2.146092161214	1
+49	110	2.146092161214	64
+50	112	2.146092190943	64
+50	144	2.14640121373	64
+50	184	2.146614702274	14
+51	112	2.146092190943	64
+52	117	2.146092278486	64
+52	155	2.146401450368	64
+52	186	2.146614789793	14
+53	117	2.146092278486	64
+54	129	2.146162161214	64
+55	130	2.146162161214	1
+55	131	2.146162161214	2
+55	141	2.146401161214	1
+55	142	2.146401161214	0
+56	146	2.146401416857	64
+57	146	2.146401416857	64
+

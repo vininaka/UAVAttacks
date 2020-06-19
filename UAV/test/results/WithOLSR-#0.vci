@@ -1,0 +1,374 @@
+file 23422 1576679551                                           
+version 2
+run WithOLSR-0-20191218-15:32:06-3974
+attr configname WithOLSR
+attr datetime 20191218-15:32:06
+attr experiment WithOLSR
+attr inifile test.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network uavsim.TestNetwork
+attr processid 3974
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.host[*].routingProtocol "\"OLSR\""
+param **.constraintAreaMinZ 0m
+param **.constraintAreaMaxZ 0m
+param **.host[*].**.channelNumber 0
+param **.attackHost[*].**.channelNumber 0
+param *.radioMedium.pathLossType "\"NakagamiFading\""
+param *.radioMedium.pathLoss.alpha 2.7
+param *.attackHost[*].wlan[0].radio.displayCommunicationRange true
+param **.wlan[0].radio.displayInterferenceRange false
+param **.attackHost[*].mobilityType "\"StationaryMobility\""
+param **.attackHost[*].mobility.initFromDisplayString false
+param **.attackHost[0].mobility.initialX 200m
+param **.attackHost[0].mobility.initialY 200m
+param **.attackHost[1].mobility.initialX 300m
+param **.attackHost[1].mobility.initialY 250m
+param **.host[*].mobilityType "\"MassMobility\""
+param **.host[*].mobility.initFromDisplayString false
+param **.host[0].mobility.constraintAreaMinX 150m
+param **.host[0].mobility.constraintAreaMinY 200m
+param **.host[0].mobility.constraintAreaMaxX 250m
+param **.host[0].mobility.constraintAreaMaxY 300m
+param **.host[1].mobility.constraintAreaMinX 200m
+param **.host[1].mobility.constraintAreaMinY 250m
+param **.host[1].mobility.constraintAreaMaxX 300m
+param **.host[1].mobility.constraintAreaMaxY 350m
+param **.host[2].mobility.constraintAreaMinX 350m
+param **.host[2].mobility.constraintAreaMinY 150m
+param **.host[2].mobility.constraintAreaMaxX 450m
+param **.host[2].mobility.constraintAreaMaxY 250m
+param **.host[3].mobility.constraintAreaMinX 300m
+param **.host[3].mobility.constraintAreaMinY 450m
+param **.host[3].mobility.constraintAreaMaxX 500m
+param **.host[3].mobility.constraintAreaMaxY 550m
+param **.host[4].mobility.constraintAreaMinX 300m
+param **.host[4].mobility.constraintAreaMinY 350m
+param **.host[4].mobility.constraintAreaMaxX 500m
+param **.host[4].mobility.constraintAreaMaxY 450m
+param **.host[5].mobility.constraintAreaMinX 450m
+param **.host[5].mobility.constraintAreaMinY 450m
+param **.host[5].mobility.constraintAreaMaxX 550m
+param **.host[5].mobility.constraintAreaMaxY 550m
+param **.host[6].mobility.constraintAreaMinX 150m
+param **.host[6].mobility.constraintAreaMinY 450m
+param **.host[6].mobility.constraintAreaMaxX 250m
+param **.host[6].mobility.constraintAreaMaxY 550m
+param **.host[7].mobility.constraintAreaMinX 550m
+param **.host[7].mobility.constraintAreaMinY 250m
+param **.host[7].mobility.constraintAreaMaxX 650m
+param **.host[7].mobility.constraintAreaMaxY 350m
+param **.host[8].mobility.constraintAreaMinX 450m
+param **.host[8].mobility.constraintAreaMinY 0m
+param **.host[8].mobility.constraintAreaMaxX 550m
+param **.host[8].mobility.constraintAreaMaxY 100m
+param **.host[9].mobility.constraintAreaMinX 550m
+param **.host[9].mobility.constraintAreaMinY 150m
+param **.host[9].mobility.constraintAreaMaxX 650m
+param **.host[9].mobility.constraintAreaMaxY 250m
+param **.host[*].mobility.changeInterval "truncnormal(2s, 0.5s)"
+param **.host[*].mobility.changeAngleBy "normal(0deg, 30deg)"
+param **.host[*].mobility.speed "truncnormal(20mps, 8mps)"
+param **.host[*].mobility.updateInterval 100ms
+param **.pingTestApp[*].continuous true
+param *.host[*].pingTestApp[*].destAddr "\"*\""
+param *.host[*].pingTestApp[*].startTime uniform(0.001s,3s)
+param *.host[*].pingTestApp[*].sendInterval 0.5s
+param *.host[*].pingTestApp[*].printPing true
+param *.host[*].numPingTestApps 1
+param *.attackHost[*].numPingTestApps 1
+param *.attackHost[*].pingTestApp[*].destAddr "\"*\""
+param *.attackHost[*].pingTestApp[*].startTime uniform(0.001s,3s)
+param *.attackHost[*].pingTestApp[*].sendInterval 0.0001s
+param *.attackHost[*].pingTestApp[*].packetSize 500B
+param **.wlan[*].bitrate 11Mbps
+param *.host[*].wlan[*].radio.transmitter.power 100mW
+param *.attackHost[*].wlan[*].radio.transmitter.power 100mW
+
+vector 0 TestNetwork.host[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 1 TestNetwork.host[0].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 2 TestNetwork.host[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 3 TestNetwork.host[1].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 4 TestNetwork.attackHost[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 5 TestNetwork.attackHost[0].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 6 TestNetwork.attackHost[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 7 TestNetwork.attackHost[1].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 8 TestNetwork.host[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 9 TestNetwork.host[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 10 TestNetwork.attackHost[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 11 TestNetwork.attackHost[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 12 TestNetwork.host[0].wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 13 TestNetwork.host[0].wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 14 TestNetwork.host[0].wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 15 TestNetwork.host[0].wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 16 TestNetwork.host[0].wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 17 TestNetwork.host[1].wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 18 TestNetwork.host[1].wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 19 TestNetwork.host[1].wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 20 TestNetwork.host[1].wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 21 TestNetwork.host[1].wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 22 TestNetwork.attackHost[0].wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 23 TestNetwork.attackHost[0].wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 24 TestNetwork.attackHost[0].wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 25 TestNetwork.attackHost[0].wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 26 TestNetwork.attackHost[0].wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 27 TestNetwork.attackHost[1].wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 28 TestNetwork.attackHost[1].wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 29 TestNetwork.attackHost[1].wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 30 TestNetwork.attackHost[1].wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 31 TestNetwork.attackHost[1].wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 32 TestNetwork.host[0].pingTestApp[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 33 TestNetwork.host[0].lo0.lo rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 34 TestNetwork.host[0].lo0.lo passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 35 TestNetwork.host[0].pingTestApp[0] pingRxSeq:vector ETV
+attr interpolationmode none
+attr title "ping rx seq, vector"
+vector 36 TestNetwork.host[1].pingTestApp[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 37 TestNetwork.attackHost[0].pingTestApp[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 38 TestNetwork.attackHost[0].networkLayer.arp sentReq:vector ETV
+attr title "ARP request sent, vector"
+vector 39 TestNetwork.attackHost[0].wlan[0].mac rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 40 TestNetwork.attackHost[0].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 41 TestNetwork.attackHost[0].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 42 TestNetwork.attackHost[0].lo0.lo rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 43 TestNetwork.attackHost[0].lo0.lo passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 44 TestNetwork.attackHost[0].pingTestApp[0] pingRxSeq:vector ETV
+attr interpolationmode none
+attr title "ping rx seq, vector"
+vector 45 TestNetwork.attackHost[0].pingTestApp[0] numLost:vector ETV
+attr interpolationmode none
+attr title "pings lost, vector"
+vector 46 TestNetwork.host[0].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 47 TestNetwork.host[0].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 48 TestNetwork.host[0].networkLayer.arp sentReply:vector ETV
+attr title "ARP replies sent, vector"
+vector 49 TestNetwork.host[0].wlan[0].mac rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 50 TestNetwork.host[1].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 51 TestNetwork.host[1].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 52 TestNetwork.attackHost[1].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 53 TestNetwork.attackHost[1].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 54 TestNetwork.host[0].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 55 TestNetwork.host[0].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 56 TestNetwork.attackHost[0].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 57 TestNetwork.attackHost[0].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+0	14506 62 0 142 0 2.146401161214 4 0 3 7 17
+1	14568 8 0 0 0 0 1 0 0 0 0
+2	14576 16 0 0 0 0 2 0 2 2 4
+3	14592 8 0 0 0 0 1 0 0 0 0
+4	14600 128 0 224 0 2.147164416857 7 0 3 15 39
+5	14728 8 0 0 0 0 1 0 0 0 0
+6	14736 16 0 0 0 0 2 0 2 2 4
+7	14752 8 0 0 0 0 1 0 0 0 0
+8	14760 145 0 181 0 2.146614672483 7 0 3 10 22
+9	14905 143 0 183 0 2.146614702274 7 1 3 13 31
+10	15048 174 0 224 0 2.147164416857 8 0 3 7 13
+11	15222 152 0 185 0 2.146614789793 7 1 3 13 31
+12	15374 304 0 181 0 2.146614672483 14 0 2 4 8
+13	15678 208 0 181 0 2.146614672483 10 0 0 0 0
+14	15886 208 0 181 0 2.146614672483 10 0 0 0 0
+15	16094 208 0 181 0 2.146614672483 10 0 0 0 0
+16	16302 208 0 181 0 2.146614672483 10 0 0 0 0
+17	16510 298 0 183 0 2.146614702274 14 0 0 0 0
+18	16808 298 0 183 0 2.146614702274 14 0 0 0 0
+19	17106 298 0 183 0 2.146614702274 14 0 0 0 0
+20	17404 298 0 183 0 2.146614702274 14 0 0 0 0
+21	17702 298 0 183 0 2.146614702274 14 0 0 0 0
+22	18000 530 0 224 0 2.147164416857 24 0 2 22 38
+23	18530 348 0 224 0 2.147164416857 16 0 0 0 0
+24	18878 348 0 224 0 2.147164416857 16 0 0 0 0
+25	19226 348 0 224 0 2.147164416857 16 0 0 0 0
+26	19574 348 0 224 0 2.147164416857 16 0 0 0 0
+27	19922 304 0 185 0 2.146614789793 14 0 0 0 0
+28	20226 304 0 185 0 2.146614789793 14 0 0 0 0
+29	20530 304 0 185 0 2.146614789793 14 0 0 0 0
+30	20834 304 0 185 0 2.146614789793 14 0 0 0 0
+31	21138 304 0 185 0 2.146614789793 14 0 0 0 0
+32	21442 45 43 206 1.64689169341 2.14689169341 2 0 1 1 1
+33	21487 46 46 50 1.64689169341 1.64689169341 2 84 84 168 14112
+34	21533 46 46 50 1.64689169341 1.64689169341 2 84 84 168 14112
+35	21579 22 53 53 1.64689169341 1.64689169341 1 0 0 0 0
+36	21601 22 57 57 1.77894100455 1.77894100455 1 0 0 0 0
+37	21623 323 70 218 2.14585290555 2.14715290555 14 0 13 91 819
+38	21946 67 72 123 2.14585290555 2.14615290555 3 1 1 3 3
+39	22013 172 75 217 2.14585290555 2.14705290555 7 64 564 2448 1284672
+40	22185 73 78 223 2.14585290555 2.147164416857 3 14 64 142 8388
+41	22258 234 79 225 2.14585290555 2.147164416857 10 0 2 11 17
+42	22492 148 93 202 2.14605290555 2.14685290555 6 528 528 3168 1672704
+43	22640 148 93 202 2.14605290555 2.14685290555 6 528 528 3168 1672704
+44	22788 70 100 205 2.14605290555 2.14685290555 3 2 10 18 140
+45	22858 69 100 205 2.14605290555 2.14685290555 3 2 8 15 93
+46	22927 50 104 182 2.146092161214 2.146614672483 2 14 64 78 4292
+47	22977 25 104 104 2.146092161214 2.146092161214 1 64 64 64 4096
+48	23002 24 107 107 2.146092161214 2.146092161214 1 1 1 1 1
+49	23026 25 110 110 2.146092161214 2.146092161214 1 64 64 64 4096
+50	23051 74 112 184 2.146092190943 2.146614702274 3 14 64 142 8388
+51	23125 25 112 112 2.146092190943 2.146092190943 1 64 64 64 4096
+52	23150 75 117 186 2.146092278486 2.146614789793 3 14 64 142 8388
+53	23225 25 117 117 2.146092278486 2.146092278486 1 64 64 64 4096
+54	23250 25 129 129 2.146162161214 2.146162161214 1 64 64 64 4096
+55	23275 96 130 142 2.146162161214 2.146401161214 4 0 2 4 6
+56	23371 25 146 146 2.146401416857 2.146401416857 1 64 64 64 4096
+57	23396 25 146 146 2.146401416857 2.146401416857 1 64 64 64 4096
+

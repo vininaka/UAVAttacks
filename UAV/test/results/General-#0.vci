@@ -1,0 +1,339 @@
+file 12325 1574685682                                           
+version 2
+run General-0-20191125-13:41:17-2230
+attr configname General
+attr datetime 20191125-13:41:17
+attr experiment General
+attr inifile doublenetwork.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network uavsim.Network
+attr processid 2230
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 0 Network.hostA.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 1 Network.hostA.wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 2 Network.hostB.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 3 Network.hostB.wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 4 Network.hostX.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 5 Network.hostX.wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 6 Network.hostY.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 7 Network.hostY.wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 8 Network.hostW.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 9 Network.hostW.wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 10 Network.hostZ.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 11 Network.hostZ.wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 12 Network.attackHostX.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 13 Network.attackHostX.wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 14 Network.attackHostY.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 15 Network.attackHostY.wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 16 Network.hostA.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 17 Network.hostB.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 18 Network.hostX.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 19 Network.hostY.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 20 Network.hostW.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 21 Network.hostZ.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 22 Network.attackHostX.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 23 Network.attackHostY.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 24 Network.hostA.wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 25 Network.hostA.wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 26 Network.hostA.wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 27 Network.hostA.wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 28 Network.hostA.wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 29 Network.hostB.wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 30 Network.hostB.wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 31 Network.hostB.wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 32 Network.hostB.wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 33 Network.hostB.wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 34 Network.hostX.wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 35 Network.hostX.wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 36 Network.hostX.wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 37 Network.hostX.wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 38 Network.hostX.wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 39 Network.hostY.wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 40 Network.hostY.wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 41 Network.hostY.wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 42 Network.hostY.wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 43 Network.hostY.wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 44 Network.hostW.wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 45 Network.hostW.wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 46 Network.hostW.wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 47 Network.hostW.wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 48 Network.hostW.wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 49 Network.hostZ.wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 50 Network.hostZ.wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 51 Network.hostZ.wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 52 Network.hostZ.wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 53 Network.hostZ.wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 54 Network.attackHostX.wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 55 Network.attackHostX.wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 56 Network.attackHostX.wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 57 Network.attackHostX.wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 58 Network.attackHostX.wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 59 Network.attackHostY.wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 60 Network.attackHostY.wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 61 Network.attackHostY.wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 62 Network.attackHostY.wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 63 Network.attackHostY.wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+0	11331 16 0 0 0 0 2 0 2 2 4
+1	11347 8 0 0 0 0 1 0 0 0 0
+2	11355 16 0 0 0 0 2 0 2 2 4
+3	11371 8 0 0 0 0 1 0 0 0 0
+4	11379 16 0 0 0 0 2 0 2 2 4
+5	11395 8 0 0 0 0 1 0 0 0 0
+6	11403 16 0 0 0 0 2 0 2 2 4
+7	11419 8 0 0 0 0 1 0 0 0 0
+8	11427 16 0 0 0 0 2 0 2 2 4
+9	11443 8 0 0 0 0 1 0 0 0 0
+10	11451 18 0 0 0 0 2 0 2 2 4
+11	11469 9 0 0 0 0 1 0 0 0 0
+12	11478 18 0 0 0 0 2 0 2 2 4
+13	11496 9 0 0 0 0 1 0 0 0 0
+14	11505 18 0 0 0 0 2 0 2 2 4
+15	11523 9 0 0 0 0 1 0 0 0 0
+16	11532 9 0 0 0 0 1 1 1 1 1
+17	11541 9 0 0 0 0 1 1 1 1 1
+18	11550 9 0 0 0 0 1 1 1 1 1
+19	11559 9 0 0 0 0 1 1 1 1 1
+20	11568 9 0 0 0 0 1 1 1 1 1
+21	11577 9 0 0 0 0 1 1 1 1 1
+22	11586 9 0 0 0 0 1 1 1 1 1
+23	11595 9 0 0 0 0 1 1 1 1 1
+24	11604 18 0 0 0 0 2 0 0 0 0
+25	11622 18 0 0 0 0 2 0 0 0 0
+26	11640 18 0 0 0 0 2 0 0 0 0
+27	11658 18 0 0 0 0 2 0 0 0 0
+28	11676 18 0 0 0 0 2 0 0 0 0
+29	11694 18 0 0 0 0 2 0 0 0 0
+30	11712 18 0 0 0 0 2 0 0 0 0
+31	11730 18 0 0 0 0 2 0 0 0 0
+32	11748 18 0 0 0 0 2 0 0 0 0
+33	11766 18 0 0 0 0 2 0 0 0 0
+34	11784 18 0 0 0 0 2 0 0 0 0
+35	11802 18 0 0 0 0 2 0 0 0 0
+36	11820 18 0 0 0 0 2 0 0 0 0
+37	11838 18 0 0 0 0 2 0 0 0 0
+38	11856 18 0 0 0 0 2 0 0 0 0
+39	11874 18 0 0 0 0 2 0 0 0 0
+40	11892 18 0 0 0 0 2 0 0 0 0
+41	11910 18 0 0 0 0 2 0 0 0 0
+42	11928 18 0 0 0 0 2 0 0 0 0
+43	11946 18 0 0 0 0 2 0 0 0 0
+44	11964 18 0 0 0 0 2 0 0 0 0
+45	11982 18 0 0 0 0 2 0 0 0 0
+46	12000 18 0 0 0 0 2 0 0 0 0
+47	12018 18 0 0 0 0 2 0 0 0 0
+48	12036 18 0 0 0 0 2 0 0 0 0
+49	12054 18 0 0 0 0 2 0 0 0 0
+50	12072 18 0 0 0 0 2 0 0 0 0
+51	12090 18 0 0 0 0 2 0 0 0 0
+52	12108 18 0 0 0 0 2 0 0 0 0
+53	12126 18 0 0 0 0 2 0 0 0 0
+54	12144 18 0 0 0 0 2 0 0 0 0
+55	12162 18 0 0 0 0 2 0 0 0 0
+56	12180 18 0 0 0 0 2 0 0 0 0
+57	12198 18 0 0 0 0 2 0 0 0 0
+58	12216 18 0 0 0 0 2 0 0 0 0
+59	12234 18 0 0 0 0 2 0 0 0 0
+60	12252 18 0 0 0 0 2 0 0 0 0
+61	12270 18 0 0 0 0 2 0 0 0 0
+62	12288 18 0 0 0 0 2 0 0 0 0
+63	12306 18 0 0 0 0 2 0 0 0 0
+
